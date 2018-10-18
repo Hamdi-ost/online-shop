@@ -1,11 +1,13 @@
-<app-navbar></app-navbar>
-<!-- Content Wrapper. Contains page content -->
 <div id="loader-wrapper" style="display: none;"></div>
 <div class="content-block">
-  <!-- Main content -->
-  <section class="content"> 
-     <router-outlet></router-outlet> 
-  </section>
+  <app-navbar></app-navbar>
+  <div class="header-empty-space"></div>
+  <router-outlet></router-outlet>
 </div>
 
+<div class="popup-wrapper">
+  <div class="bg-layer"></div>
+  <app-login></app-login>
+  <app-register></app-register>
+</div>
 <app-footer></app-footer>
