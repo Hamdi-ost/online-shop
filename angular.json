@@ -23,9 +23,23 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/css/bootstrap.extension.css",
+              "src/assets/css/style.css",
+              "src/assets/css/swiper.css",
+              "src/assets/css/sumoselect.css",
+              "src/assets/css/font-awesome.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery-2.2.4.min.js",
+              "src/assets/js/swiper.jquery.min.js",
+              "src/assets/js/global.js",
+              "src/assets/js/jquery.sumoselect.min.js",
+              "src/assets/js/jquery.classycountdown.js",
+              "src/assets/js/jquery.knob.js",
+              "src/assets/js/jquery.throttle.js"
+            ]
           },
           "configurations": {
             "production": {
