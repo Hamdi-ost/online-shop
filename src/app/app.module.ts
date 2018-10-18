@@ -7,11 +7,20 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { ErrorComponent } from './components/error/error.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
+import { AboutComponent } from './components/about/about.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 const appRoutes: Routes = [
 
-  { path: 'not-found', component: ErrorComponent },
   { path: 'home', component: HomeComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'products', component: ProductsListComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'not-found', component: ErrorComponent },
   { path: '', component: HomeComponent },
 
   { path: '**', redirectTo: 'not-found' }
@@ -24,7 +33,11 @@ const appRoutes: Routes = [
     FooterComponent,
     HomeComponent,
     ErrorComponent,
-    ProductsListComponent
+    ProductsListComponent,
+    AboutComponent,
+    ContactComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
