@@ -1,0 +1,13 @@
+<div class="row">
+  <div *ngFor="let title of titles" class="col-sm-4 col-xs-b25" >
+    <div class="h4 col-xs-b25">{{title}}</div>
+    <div *ngFor="let data of lastRowHomePage; let i=index" class="product-shortcode style-4 light clearfix">
+      <a class="preview" href="#"><img src="../../../assets/img/{{data[i].img}}" alt=""></a>
+      <div class="description">
+        <div class="simple-article color size-1 col-xs-b5"><a href="#">{{data[i].category}}</a></div>
+        <h6 class="h6 col-xs-b10"><a href="#">{{data[i].productName}}</a></h6>
+        <div class="simple-article dark">{{data[i].price | currency}}</div>
+      </div>
+    </div>
+  </div>
+</div>

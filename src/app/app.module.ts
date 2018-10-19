@@ -12,6 +12,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { SliderComponent } from './components/slider/slider.component';
+import { LastRowComponent } from './components/last-row/last-row.component';
 
 const appRoutes: Routes = [
 
@@ -39,7 +40,8 @@ const appRoutes: Routes = [
     ContactComponent,
     LoginComponent,
     RegisterComponent,
-    SliderComponent
+    SliderComponent,
+    LastRowComponent
   ],
   imports: [
     BrowserModule,
