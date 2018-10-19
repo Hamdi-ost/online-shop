@@ -1,4 +1,4 @@
-[
+{"products": [
 {
     "name":"Lenovo IP320-15ISK-Black",
     "description":
@@ -37,7 +37,7 @@
     "description":"Intel Core i7 7700HQ , 2.8/3.8 Turbo Ghz - 6 Mo cache ,16 Go DDR4, Disque dur 1To SATA, 17.3 pouce FULL HD , NVIDIA GeForce GTX 1050,  4 Go dédiés",
     "price":"3199 DT",
     "category":"PC",
-    "src": "src/assets/img/GL753VD-GB223T_m.jpg"
+    "src": "src/assets/img/GL753VD-GB223T_g.jpg"
 
 },
 {
@@ -45,7 +45,7 @@
     "description":"Garantie 2 an ,Ecran 15.6Full HD IPS LED  ,Processeur Intel Core i7-7700HQ, up to 3.80 GHz, 6 Mo de mémoire cache",
     "price":"2249 DT",
     "category": "PC",
-    "src": "src/assets/img/Y520-15IKBN-i7_m.jpg"
+    "src": "src/assets/img/Y520-15IKBN-i7_g.jpg"
 
 },
 {
@@ -53,16 +53,15 @@
     "description":"imprimante laser monochrome sp 201 NW",
     "price":"199 DT",
     "category":"imprimante",
-    "src": "src/assets/img/produit/images/SP201Nw_m.jpg"
-
+    "src": "src/assets/img/SP201Nw_g.jpg"
 },
+
 {
     "name":"EPSON L3050",
     "description":"EPSON imprimante L3050  wifi A4 3en1 couleur USB, wifi ,+2 Bouteille Noir Offerte",
     "price":"599 DT",
     "category":"imprimante",
     "src": "src/assets/img/L3050_m.jpg"
-
 },
 {
     "name":"hp Wireless-415",
@@ -73,3 +72,4 @@
 }
 
 ]
+}

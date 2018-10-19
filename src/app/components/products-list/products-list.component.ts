@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-//import * as data from 'src/assets/contenu.json' ;
+import * as data from '../../../assets/contenu.json' ;
 @Component({
   selector: 'app-products-list',
   templateUrl: './products-list.component.html',
@@ -9,9 +9,18 @@ export class ProductsListComponent implements OnInit {
   name : string;
   description: string ;
   price : string;
+  category:string;
   src: string;
-  constructor() { }
+  product;
 
+  constructor() { 
+   this.product=data['products'];
+   this.name=this.product.name;
+   this.price=this.product.price;
+   this.description=this.product.description;
+   this.src=this.product.src;
+   this.category=this.product.category;
+  }
   ngOnInit() {
   }
 
