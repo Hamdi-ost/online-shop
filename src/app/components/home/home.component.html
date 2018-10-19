@@ -1,3 +1,260 @@
-<p>
-  home works!
-</p>
+<app-slider></app-slider>
+
+<div class="grey-background">
+  <div class="container">
+    <div class="empty-space col-xs-b30"></div>
+    <div class="row">
+      <div *ngFor="let product of firstRowHomePage" class="col-md-6 col-xs-b30 col-md-b0">
+        <div class="banner-shortcode style-6">
+          <img class="image" src="../../../assets/img/{{product.img}}" alt="">
+          <div class="content">
+            <div class="cell-view">
+              <h4 class="title h4 col-xs-b5"><span class="color">{{product.promotion}}</span> <br> on all smartphones</h4>
+              <div class="description simple-article size-2 col-xs-b10">{{product.description}}</div>
+              <div class="subtitle simple-article size-5 grey uppercase col-xs-b20">Don't miss! <span class="color">up
+                  to {{product.solde}}</span></div>
+              <a class="button size-2 style-3" href="#">
+                <span class="button-wrapper">
+                  <span class="icon"><img src="../../../assets/img/icon-4.png" alt=""></span>
+                  <span class="text">learn more</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="empty-space col-xs-b35 col-md-b70"></div>
+
+    <!--Best proposes-->
+    <div class="tabs-block">
+      <div class="row">
+        <div class="col-lg-4 col-xs-b15 col-lg-b0">
+          <div class="h4">best proposes</div>
+        </div>
+        <div class="col-lg-8">
+          <div class="tabulation-menu-wrapper col-lg-text-right">
+            <div class="tabulation-title simple-input">all</div>
+            <ul class="tabulation-toggle">
+              <li><a class="tab-menu active">all</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="empty-space col-xs-b15 col-sm-b30"></div>
+      <div class="tab-entry visible">
+        <div class="slider-wrapper">
+          <div class="swiper-button-prev hidden-xs swiper-button-prev-swiper-unique-id-4 swiper-button-disabled"></div>
+          <div class="swiper-button-next hidden-xs swiper-button-next-swiper-unique-id-4"></div>
+          <div class="swiper-container arrows-align-top swiper-swiper-unique-id-4 initialized swiper-container-horizontal"
+            data-breakpoints="1" data-xs-slides="1" data-sm-slides="2" data-md-slides="2" data-lt-slides="2"
+            data-slides-per-view="3" id="swiper-unique-id-4">
+            <div class="swiper-wrapper">
+              <div *ngFor="let product of bestProposes" class="swiper-slide swiper-slide-active" style="width: 570px;">
+                <div class="product-shortcode style-1 big">
+                  <div class="product-label green">best price</div>
+                  <div class="preview">
+                    <img src="../../../assets/img/{{product.img}}" alt="">
+                    <div class="preview-buttons valign-middle">
+                      <div class="valign-middle-content">
+                        <a class="button size-2 style-2" href="#">
+                          <span class="button-wrapper">
+                            <span class="icon"><img src="../../../assets/img/icon-1.png" alt=""></span>
+                            <span class="text">Learn More</span>
+                          </span>
+                        </a>
+                        <a class="button size-2 style-3" href="#">
+                          <span class="button-wrapper">
+                            <span class="icon"><img src="../../../assets/img/icon-3.png" alt=""></span>
+                            <span class="text">Add To Cart</span>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="title">
+                    <div class="simple-article size-1 color col-xs-b5"><a href="#">{{product.category}}</a></div>
+                    <div class="h6 animate-to-green"><a href="#">{{product.productName}}</a></div>
+                  </div>
+                  <div class="description">
+                    <div class="simple-article text size-2">{{product.description}}</div>
+                    <div class="icons">
+                      <a class="entry"><i class="fa fa-check" aria-hidden="true"></i></a>
+                      <a class="entry open-popup" data-rel="3"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                      <a class="entry"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination relative-pagination visible-xs swiper-pagination-swiper-unique-id-4 swiper-pagination-clickable swiper-pagination-bullets"><span
+                class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span><span
+                class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="empty-space col-xs-b35 col-md-b70"></div>
+
+    <!--Popular Products-->
+    <div class="tabs-block">
+      <div class="row">
+        <div class="col-lg-4 col-xs-b15 col-lg-b0">
+          <div class="h4">popular products</div>
+        </div>
+        <div class="col-lg-8">
+          <div class="tabulation-menu-wrapper col-lg-text-right">
+            <div class="tabulation-title simple-input">all</div>
+            <ul class="tabulation-toggle">
+              <li><a class="tab-menu active">smartphones</a></li>
+              <li><a routerLink="" class="tab-menu">laptops</a></li>
+              <li><a routerLink="" class="tab-menu">pc</a></li>
+              <li><a routerLink="" class="tab-menu">gadegets</a></li>
+              <li><a routerLink="" class="tab-menu">accessories</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="empty-space col-xs-b15 col-sm-b30"></div>
+      <div class="tab-entry visible">
+        <div class="row nopadding">
+          <div class="col-lg-6">
+            <div class="slider-wrapper side-borders grid-products-4-items">
+              <div class="swiper-container swiper-swiper-unique-id-8 initialized swiper-container-horizontal" id="swiper-unique-id-8">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide swiper-slide-active" style="width: 571px;">
+                    <div class="product-shortcode style-3 big">
+                      <div class="empty-space col-xs-b35 col-md-b70"></div>
+                      <div class="swiper-container swiper-swiper-unique-id-9 initialized swiper-container-horizontal"
+                        data-loop="1" data-touch="0" id="swiper-unique-id-9">
+                        <div class="swiper-button-prev style-1 swiper-button-prev-swiper-unique-id-9"></div>
+                        <div class="swiper-button-next style-1 swiper-button-next-swiper-unique-id-9"></div>
+                        <div class="swiper-wrapper" style="transform: translate3d(-570px, 0px, 0px); transition-duration: 0ms;">
+                          <div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="1"
+                            style="width: 570px;">
+                            <img src="../../../assets/img/product-119.jpg" alt="">
+                          </div>
+                          <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" style="width: 570px;">
+                            <img src="../../../assets/img/product-118.jpg" alt="">
+                          </div>
+                          <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="1" style="width: 570px;">
+                            <img src="../../../assets/img/product-119.jpg" alt="">
+                          </div>
+
+                        </div>
+                      </div>
+                      <div class="empty-space col-xs-b35 col-md-b70"></div>
+                      <div class="h4 animate-to-green"><a href="#">smart watch zeseries</a></div>
+                      <div class="empty-space col-xs-b10"></div>
+                      <div class="description">
+                        <div class="simple-article size-2">Sed id purus ac arcu pulvinar euismod natoque</div>
+                      </div>
+                      <div class="simple-article size-5 grey col-xs-b20">BEST PRICE: <span class="color">$299.00</span></div>
+                      <div class="countdown-wrapper">
+                        <div class="countdown initialized" data-end="Sep,1,2017">
+                          <div class="ClassyCountdown-wrapper">
+                            <div *ngFor="let count of countDown" class="ClassyCountdown-{{count}}" style="height: 80px;">
+                              <div style="display: inline; height: 80px; width: 80px;"><canvas width="80" height="80"></canvas><input
+                                  type="text" readonly="readonly" style="display: none; width: 0px; visibility: hidden;"></div><span
+                                class="ClassyCountdown-value" style="color: rgb(52, 52, 52); margin-top: -18px; font-size: 18px;">
+                                <div>0</div><span style="font-size: 0.5em;color:#888;text-transform: uppercase;">{{count}}</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="preview-buttons">
+                        <div class="buttons-wrapper">
+                          <a class="button size-2 style-2" href="#">
+                            <span class="button-wrapper">
+                              <span class="icon"><img src="../../../assets/img/icon-1.png" alt=""></span>
+                              <span class="text">Learn More</span>
+                            </span>
+                          </a>
+                          <a class="button size-2 style-3" href="#">
+                            <span class="button-wrapper">
+                              <span class="icon"><img src="../../../assets/img/icon-3.png" alt=""></span>
+                              <span class="text">Add To Cart</span>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination relative-pagination swiper-pagination-swiper-unique-id-8 swiper-pagination-clickable swiper-pagination-bullets"><span
+                    class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="row nopadding">
+              <div *ngFor="let popular of popularProducts" class="col-sm-6">
+                <div class="product-shortcode style-1">
+                  <div class="title">
+                    <div class="simple-article size-1 color col-xs-b5"><a href="#">{{popular.category}}</a></div>
+                    <div class="h6 animate-to-green"><a href="#">{{popular.productName}}</a></div>
+                  </div>
+                  <div class="preview">
+                    <img src="../../../assets/img/{{popular.img}}" alt="">
+                    <div class="preview-buttons valign-middle">
+                      <div class="valign-middle-content">
+                        <a class="button size-2 style-2" href="#">
+                          <span class="button-wrapper">
+                            <span class="icon"><img src="../../../assets/img/icon-1.png" alt=""></span>
+                            <span class="text">Learn More</span>
+                          </span>
+                        </a>
+                        <a class="button size-2 style-3" href="#">
+                          <span class="button-wrapper">
+                            <span class="icon"><img src="../../../assets/img/icon-3.png" alt=""></span>
+                            <span class="text">Add To Cart</span>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="price">
+                    <div class="simple-article size-4 dark">{{popular.price | currency}}</div>
+                  </div>
+                  <div class="description">
+                    <div class="simple-article text size-2">{{popular.description}}</div>
+                    <div class="icons">
+                      <a class="entry"><i class="fa fa-check" aria-hidden="true"></i></a>
+                      <a class="entry"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                      <a class="entry"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="empty-space col-xs-b35 col-md-b70"></div>
+  </div>
+</div>
+
+<div class="empty-space col-xs-b35 col-md-b70"></div>
+
+<!-- Last Row -->
+<div class="row">
+  <div *ngFor="let title of titles" class="col-sm-4 col-xs-b25" >
+    <div class="h4 col-xs-b25">{{title}}</div>
+    <div *ngFor="let data of lastRowHomePage; let i=index" class="product-shortcode style-4 light clearfix">
+      <a class="preview" href="#"><img src="../../../assets/img/{{data[i].img}}" alt=""></a>
+      <div class="description">
+        <div class="simple-article color size-1 col-xs-b5"><a href="#">{{data[i].category}}</a></div>
+        <h6 class="h6 col-xs-b10"><a href="#">{{data[i].productName}}</a></h6>
+        <div class="simple-article dark">{{data[i].price | currency}}</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="empty-space col-xs-b35 col-md-b70"></div>
+

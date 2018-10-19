@@ -11,6 +11,7 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { SliderComponent } from './components/slider/slider.component';
 
 const appRoutes: Routes = [
 
@@ -37,7 +38,8 @@ const appRoutes: Routes = [
     AboutComponent,
     ContactComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
