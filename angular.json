@@ -38,7 +38,9 @@
               "src/assets/js/jquery.sumoselect.min.js",
               "src/assets/js/jquery.classycountdown.js",
               "src/assets/js/jquery.knob.js",
-              "src/assets/js/jquery.throttle.js"
+              "src/assets/js/jquery.throttle.js",
+              "src/assets/js/jquery-ui.min.js",
+              "src/assets/js/jquery.ui.touch-punch.min.js"
             ]
           },
           "configurations": {

@@ -6,20 +6,23 @@ import * as data from '../../../assets/contenu.json' ;
   styleUrls: ['./products-list.component.css']
 })
 export class ProductsListComponent implements OnInit {
-  name : string;
+
+  id: number;
+  name: string;
   description: string ;
-  price : string;
-  category:string;
+  price: string;
+  category: string;
   src: string;
   product;
 
-  constructor() { 
-   this.product=data['products'];
-   this.name=this.product.name;
-   this.price=this.product.price;
-   this.description=this.product.description;
-   this.src=this.product.src;
-   this.category=this.product.category;
+  constructor() {
+   this.product = data['products'];
+   this.id = this.product.id;
+   this.name = this.product.name;
+   this.price = this.product.price;
+   this.description = this.product.description;
+   this.src = this.product.src;
+   this.category = this.product.category;
   }
   ngOnInit() {
   }
