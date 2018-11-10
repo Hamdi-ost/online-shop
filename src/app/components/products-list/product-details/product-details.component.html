@@ -1,0 +1,223 @@
+<div class="container">
+  <div class="empty-space col-xs-b15 col-sm-b30"></div>
+
+  <div class="row">
+    <div class="col-md-9 col-md-push-3">
+      <div class="row">
+        <div class="col-sm-6 col-xs-b30 col-sm-b0">
+
+          <div class="main-product-slider-wrapper swipers-couple-wrapper">
+            <div class="swiper-container swiper-control-top swiper-swiper-unique-id-3 initialized swiper-container-horizontal"
+              id="swiper-unique-id-3">
+              <div class="swiper-button-prev hidden swiper-button-prev-swiper-unique-id-3 swiper-button-disabled"></div>
+              <div class="swiper-button-next hidden swiper-button-next-swiper-unique-id-3"></div>
+              <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">
+                <div class="swiper-slide swiper-slide-active" style="width: 409px;">
+
+                  <div class="product-big-preview-entry swiper-lazy swiper-lazy-loaded" [style.backgroundImage]="'url('+ src +')'"></div>
+                </div>
+
+              </div>
+            </div>
+            <div class="empty-space col-xs-b30 col-sm-b60"></div>
+          </div>
+
+        </div>
+        <div class="col-sm-6">
+          <div class="simple-article size-3 grey col-xs-b5">{{category}}</div>
+          <div class="h3 col-xs-b25">{{name}}</div>
+          <div class="row col-xs-b25">
+            <div class="col-sm-6">
+              <div class="simple-article size-5 grey">PRICE: <span class="color">{{ price }}</span></div>
+            </div>
+            <div class="col-sm-6 col-sm-text-right">
+              <div class="rate-wrapper align-inline">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+              </div>
+              <div class="simple-article size-2 align-inline">128 Reviews</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="simple-article size-3 col-xs-b5">ITEM NO.: <span class="grey">127-#5238</span></div>
+            </div>
+            <div class="col-sm-6 col-sm-text-right">
+              <div class="simple-article size-3 col-xs-b20">AVAILABLE.: <span class="grey">{{available}}</span></div>
+            </div>
+          </div>
+          <div class="simple-article size-3 col-xs-b30">{{description}}</div>
+          <div class="row col-xs-b40">
+            <div class="col-sm-3">
+              <div class="h6 detail-data-title size-1">size:</div>
+            </div>
+            <div class="col-sm-9">
+              <div class="SumoSelect" tabindex="0"><select class="SlectBox SumoUnder" tabindex="-1">
+                  <option disabled="disabled" selected="selected" value="Choose size">Choose size</option>
+                  <option value="volvo">Volvo</option>
+                  <option value="saab">Saab</option>
+                  <option value="mercedes">Mercedes</option>
+                  <option value="audi">Audi</option>
+                </select>
+                <p class="CaptionCont SelectBox search" title=" Saab"><span class=""> Saab</span><label><i></i></label><input
+                    type="text" class="search-txt" value="" placeholder="Search"></p>
+                <div class="optWrapper">
+                  <ul class="options">
+                    <li class="opt disabled"><label>Choose size</label></li>
+                    <li class="opt"><label>Volvo</label></li>
+                    <li class="opt selected"><label>Saab</label></li>
+                    <li class="opt"><label>Mercedes</label></li>
+                    <li class="opt"><label>Audi</label></li>
+                  </ul>
+                  <p class="no-match" style="display: none;"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row col-xs-b40">
+            <div class="col-sm-3">
+              <div class="h6 detail-data-title">color:</div>
+            </div>
+            <div class="col-sm-9">
+              <div class="color-selection size-1">
+                <div class="entry" style="color: #a7f050;"></div>
+                <div class="entry" style="color: #50e3f0;"></div>
+                <div class="entry" style="color: #eee;"></div>
+                <div class="entry" style="color: #4d900c;"></div>
+                <div class="entry" style="color: #edb82c;"></div>
+                <div class="entry" style="color: #7d3f99;"></div>
+                <div class="entry" style="color: #3481c7;"></div>
+                <div class="entry active" style="color: #bf584b;"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row col-xs-b40">
+            <div class="col-sm-3">
+              <div class="h6 detail-data-title size-1">quantity:</div>
+            </div>
+            <div class="col-sm-9">
+              <div class="quantity-select">
+                <span class="minus"></span>
+                <span class="number">1</span>
+                <span class="plus"></span>
+              </div>
+            </div>
+          </div>
+          <div class="row m5 col-xs-b40">
+            <div class="col-sm-6 col-xs-b10 col-sm-b0">
+              <a class="button size-2 style-2 block" href="#">
+                <span class="button-wrapper">
+                  <span class="icon"><img src="../../../../assets/img/icon-2.png" alt=""></span>
+                  <span class="text">add to cart</span>
+                </span>
+              </a>
+            </div>
+            <div class="col-sm-6">
+              <a class="button size-2 style-1 block noshadow" href="#">
+                <span class="button-wrapper">
+                  <span class="icon"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+                  <span class="text">add to favourites</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="empty-space col-xs-b35 col-md-b70"></div>
+
+      <div class="tabs-block">
+        <div class="tabulation-menu-wrapper text-center">
+          <div class="tabulation-title simple-input">description</div>
+          <ul class="tabulation-toggle">
+            <li><a class="tab-menu active">technical specs</a></li>
+          </ul>
+        </div>
+        <div class="empty-space col-xs-b30 col-sm-b60"></div>
+
+        <div class="tab-entry visible">
+          <div class="h5">{{name}}</div>
+          <div class="empty-space col-xs-b15"></div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="product-description-entry row nopadding">
+                <div class="col-xs-6">
+                  <div class="h6">height:</div>
+                </div>
+                <div class="col-xs-6 text-right">
+                  <div class="simple-article size-2">{{height}}</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="product-description-entry row nopadding">
+                <div class="col-xs-6">
+                  <div class="h6">width:</div>
+                </div>
+                <div class="col-xs-6 text-right">
+                  <div class="simple-article size-2">{{width}}</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="product-description-entry row nopadding">
+                <div class="col-xs-6">
+                  <div class="h6">depth:</div>
+                </div>
+                <div class="col-xs-6 text-right">
+                  <div class="simple-article size-2">{{depth}}</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="product-description-entry row nopadding">
+                <div class="col-xs-6">
+                  <div class="h6">case:</div>
+                </div>
+                <div class="col-xs-6 text-right">
+                  <div class="simple-article size-2">{{case}}</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="product-description-entry row nopadding">
+                <div class="col-xs-6">
+                  <div class="h6">material:</div>
+                </div>
+                <div class="col-xs-6 text-right">
+                  <div class="simple-article size-2">{{material}}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="empty-space col-xs-b30 col-sm-b60"></div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="simple-article size-2 text-center">
+                <img [src]="views[0]" alt="">
+                <p><br>View 1</p>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="simple-article size-2 text-center">
+                <img [src]="views[1]" alt="">
+                <p><br>View 2</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="empty-space col-xs-b30 col-sm-b60"></div>
+        </div>
+      </div>
+
+      <div class="empty-space col-xs-b35 col-md-b70"></div>
+
+    </div>
+    <app-sidebar></app-sidebar>
+    <!-- Last Row -->
+    <app-last-row></app-last-row>
+
+    <div class="empty-space col-xs-b35 col-md-b70"></div>
