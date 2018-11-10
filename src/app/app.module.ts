@@ -14,32 +14,16 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { LastRowComponent } from './components/last-row/last-row.component';
-<<<<<<< HEAD
 import { MenuComponent } from './components/menu/menu.component';
 import { ProductsComponent } from './components/products/products.component';
-import {NgxPaginationModule } from 'Ngx-pagination';
-||||||| merged common ancestors
-
-=======
-import { FilterPipe } from './filter.pipe';
-import { ProductDetailsComponent } from './components/products-list/product-details/product-details.component';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
-
->>>>>>> dfd8592fc95fa48306ac13444a22d3af812c4a33
+import {NgxPaginationModule } from 'ngx-pagination';
 const appRoutes: Routes = [
 
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-<<<<<<< HEAD
   { path: 'products', component: ProductsComponent },
-||||||| merged common ancestors
-  { path: 'products', component: ProductsListComponent },
-=======
-  { path: 'products', component: ProductsListComponent },
-  { path: 'products/:id', component: ProductDetailsComponent },
->>>>>>> dfd8592fc95fa48306ac13444a22d3af812c4a33
   { path: 'contact', component: ContactComponent },
   { path: 'not-found', component: ErrorComponent },
   { path: '', component: HomeComponent },
@@ -60,18 +44,9 @@ const appRoutes: Routes = [
     LoginComponent,
     RegisterComponent,
     SliderComponent,
-<<<<<<< HEAD
     LastRowComponent,
     MenuComponent,
     ProductsComponent
-||||||| merged common ancestors
-    LastRowComponent
-=======
-    LastRowComponent,
-    FilterPipe,
-    ProductDetailsComponent,
-    SidebarComponent
->>>>>>> dfd8592fc95fa48306ac13444a22d3af812c4a33
   ],
   imports: [
     FormsModule,
