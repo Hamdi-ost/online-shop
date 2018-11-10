@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as data from '../../../assets/contenu.json' ;
+import * as data from '../../../assets/produits.json' ;
 @Component({
   selector: 'app-products-list',
   templateUrl: './products-list.component.html',
