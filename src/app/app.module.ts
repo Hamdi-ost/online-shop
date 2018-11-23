@@ -14,16 +14,19 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { LastRowComponent } from './components/last-row/last-row.component';
-import { MenuComponent } from './components/menu/menu.component';
-import { ProductsComponent } from './components/products/products.component';
+import { FilterPipe } from './filter.pipe';
+import { ProductDetailsComponent } from './components/products-list/product-details/product-details.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 import {NgxPaginationModule } from 'ngx-pagination';
+
 const appRoutes: Routes = [
 
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'products', component: ProductsComponent },
+  { path: 'products', component: ProductsListComponent },
+  { path: 'products/:id', component: ProductDetailsComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'not-found', component: ErrorComponent },
   { path: '', component: HomeComponent },
@@ -45,8 +48,9 @@ const appRoutes: Routes = [
     RegisterComponent,
     SliderComponent,
     LastRowComponent,
-    MenuComponent,
-    ProductsComponent
+    FilterPipe,
+    ProductDetailsComponent,
+    SidebarComponent
   ],
   imports: [
     FormsModule,

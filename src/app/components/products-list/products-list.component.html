@@ -1,49 +1,4 @@
 <div class="container">
-        <div class="products-content">
-                <div class="products-wrapper">
-                    <div class="row nopadding">
-                            <div class="col-sm-4" *ngFor="let prod of product  ">
-                                    <div class="product-shortcode style-1">
-                                        <div class="title">
-                                            <div class="simple-article size-1 color col-xs-b5"><a routerLink="#">{{prod.category}}</a></div>
-                                            <div class="h6 animate-to-green"><a routerLink="#">{{prod.name}}</a></div>
-                                        </div>
-                                        <div class="preview">
-                                            <img src="{{prod.src}}" alt="">
-                                            <div class="preview-buttons valign-middle">
-                                                <div class="valign-middle-content">
-                                                    <a class="button size-2 style-2" routerLink="#">
-                                                        <span class="button-wrapper">
-                                                            <span class="icon"><img src="src/assets/img/icon-1.png" alt=""></span>
-                                                            <span class="text">Learn More</span>
-                                                        </span>
-                                                    </a>
-                                                    <a class="button size-2 style-3" routerLink="#">
-                                                        <span class="button-wrapper">
-                                                            <span class="icon"><img src="src/assets/img/icon-3.png" alt=""></span>
-                                                            <span class="text">Add To Cart</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="price">
-                                            <div class="color-selection">
-                                                <div class="entry active" style="color: #a7f050;"></div>
-                                                <div class="entry" style="color: #50e3f0;"></div>
-                                                <div class="entry" style="color: #eee;"></div>
-                                            </div>
-                                            <div class="simple-article size-4"><span class="color">{{prod.price}}</span>&nbsp;&nbsp;&nbsp;</div>
-                                        </div>
-                                        <div class="description">
-                                            <div class="simple-article text size-2">{{prod.description}}</div>
-                                            <div class="icons">
-                                                <a class="entry"><i class="fa fa-check" aria-hidden="true"></i></a>
-                                                <a class="entry open-popup" data-rel="3"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                                                <a class="entry"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>  
     <div class="empty-space col-xs-b15 col-sm-b30"></div>
     <div class="breadcrumbs">
         <a href="#">home</a>
@@ -68,7 +23,7 @@
             <div class="products-content">
                 <div class="products-wrapper">
                     <div class="row nopadding">
-                        <div class="col-sm-4" *ngFor="let prod of product | filter : searchText | paginate:{ itemsPerPage:9 , currentPage: p }">
+                        <div class="col-sm-4" *ngFor="let prod of product | filter : searchText">
                             <div class="product-shortcode style-1">
                                 <div class="title">
                                     <div class="simple-article size-1 color col-xs-b5"><a href="#">{{prod.category}}</a></div>
@@ -110,7 +65,37 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
                     </div>
+                </div>
+            </div>
+            <div class="empty-space col-xs-b35 col-sm-b0"></div>
+            <div class="row">
+                <div class="col-sm-3 hidden-xs">
+                    <a class="button size-1 style-5" href="#">
+                        <span class="button-wrapper">
+                            <span class="icon"><i class="fa fa-angle-left" aria-hidden="true"></i></span>
+                            <span class="text">prev page</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-sm-6 text-center">
+                    <div class="pagination-wrapper">
+                        <a class="pagination active">1</a>
+                        <a class="pagination">2</a>
+                        <a class="pagination">3</a>
+                        <a class="pagination">4</a>
+                        <span class="pagination">...</span>
+                        <a class="pagination">23</a>
+                    </div>
+                </div>
+                <div class="col-sm-3 hidden-xs text-right">
+                    <a class="button size-1 style-5" href="#">
+                        <span class="button-wrapper">
+                            <span class="icon"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                            <span class="text">prev page</span>
+                        </span>
+                    </a>
                 </div>
             </div>
 
