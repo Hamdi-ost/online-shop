@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import * as data from '../../../assets/produits.json' ;
+import * as data from '../../../assets/produits.json';
+import { ProductsService } from 'src/app/services/products.service.js';
 @Component({
   selector: 'app-products-list',
   templateUrl: './products-list.component.html',
@@ -7,22 +8,16 @@ import * as data from '../../../assets/produits.json' ;
 })
 export class ProductsListComponent implements OnInit {
 
-  id: number;
-  name: string;
-  description: string ;
-  price: string;
-  category: string;
-  src: string;
-  product;
-
-  constructor() {
-   this.product = data['products'];
-   this.id = this.product.id;
-   this.name = this.product.name;
-   this.price = this.product.price;
-   this.description = this.product.description;
-   this.src = this.product.src;
-   this.category = this.product.category;
+  products = [];
+  // tslint:disable-next-line:max-line-length
+  public src = ['15-BS042NK_m.jpg', 'lenovo.jpg', 'hp.jpg', 'lenovo.jpg', 'clavier.jpeg', 'dd.jpeg', 'server.jpeg', 'iphone.jpeg', 'cable.jpg', 'carteGra.jpg'];
+  constructor(private productService: ProductsService) {
+    this.productService.getProduct().subscribe(product => {
+      for (let i = 0; i < this.src.length; i++) {
+      product[i]['src'] = 'src/assets/img/' + this.src[i];
+      }
+      this.products.push(product);
+    });
   }
   ngOnInit() {
   }

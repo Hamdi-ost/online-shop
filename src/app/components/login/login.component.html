@@ -1,32 +1,49 @@
-  <div class="popup-content" data-rel="1">
-    <div class="layer-close"></div>
-    <div class="popup-container size-1">
-      <div class="popup-align">
-        <h3 class="h3 text-center">Log in</h3>
-        <div class="empty-space col-xs-b30"></div>
-        <input class="simple-input" type="text" value="" placeholder="Your email">
-        <div class="empty-space col-xs-b10 col-sm-b20"></div>
-        <input class="simple-input" type="password" value="" placeholder="Enter password">
-        <div class="empty-space col-xs-b10 col-sm-b20"></div>
-        <div class="row">
-          <div class="col-sm-6 col-xs-b10 col-sm-b0">
-            <div class="empty-space col-sm-b5"></div>
-            <a class="simple-link">Forgot password?</a>
-            <div class="empty-space col-xs-b5"></div>
-            <a class="simple-link">register now</a>
-          </div>
-          <div class="col-sm-6 text-right">
-            <a class="button size-2 style-3" href="#">
-              <span class="button-wrapper">
-                <span class="icon"><img src="../../../assets/img/icon-4.png" alt=""></span>
-                <span class="text">submit</span>
-              </span>
-            </a>
-          </div>
+<div class="popup-content" data-rel="1">
+  <div class="layer-close"></div>
+  <div class="popup-container size-1">
+    <div class="popup-align">
+      <h3 class="h3 text-center">Log in</h3>
+      <div class="empty-space col-xs-b30"></div>
+      <input class="simple-input" type="text" value="" placeholder="Your email">
+      <div class="empty-space col-xs-b10 col-sm-b20"></div>
+      <input class="simple-input" type="password" value="" placeholder="Enter password">
+      <div class="empty-space col-xs-b10 col-sm-b20"></div>
+      <div class="row">
+        <div class="container" style="float: left;;">
+          <a class="button size-2 style-3" href="#">
+            <span class="button-wrapper">
+              <span class="icon"><img src="../../../assets/img/icon-4.png" alt=""></span>
+              <span class="text">submit</span>
+            </span>
+          </a>
         </div>
       </div>
-      <div class="button-close"></div>
-    </div>
-  </div>
+      <hr>
+      <div class="row">
+        <div class="container" style="text-align:center;">
+          <a class="button size-2 style-3"  (click)="auth.googleLogin()">
+            <span class="button-wrapper" style="background-color: red">
+              <span class="icon"><img src="../../../assets/img/icon-4.png" alt=""></span>
+              <span class="text fa fa-google">  LOGIN WITH GOOGLE</span>
+            </span>
+          </a>
+        </div>
+      </div>
 
-  
+
+    </div>
+    <div class="button-close"></div>
+  </div>
+</div>
+
+
+<!-- User logged in -->
+<ng-template #authenticated>
+  <div *ngIf="auth.user | async as user">
+    <h3>Howdy, {{ user.displayName }}</h3>
+    <img  [src]="user.photoURL">
+    <p>UID: {{ user.uid }}</p>
+    <p>Favorite Color: {{ user?.favoriteColor }} </p>
+    <button (click)="auth.signOut()">Logout</button>
+  </div>
+  </ng-template>

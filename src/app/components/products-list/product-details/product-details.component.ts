@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as data from '../../../../assets/produits.json';
 import { ActivatedRoute } from '@angular/router';
+import { ProductsService } from 'src/app/services/products.service.js';
 
 @Component({
   selector: 'app-product-details',
@@ -14,38 +15,36 @@ export class ProductDetailsComponent implements OnInit {
   price: string;
   category: string;
   src: string;
-  width;
+  width ;
   height;
   case;
   depth;
   material;
   available;
-  views;
+  views = [];
+  product = [];
 
-  getDetails(id) {
-    const details = data['products'].filter(detail => {
-      if (detail.id === Number(id)) {
-        this.name = detail.name;
-        this.price = detail.price;
-        this.description = detail.description;
-        this.src = detail.src;
-        this.category = detail.category;
 
-        this.width = detail.width;
-        this.height = detail.height;
-        this.case = detail.case;
-        this.depth = detail.depth;
-        this.material = detail.material;
-        this.available = detail.available;
-        this.views = detail.views;
-      }
-    });
-  }
 
-  constructor(private route: ActivatedRoute) {
-    this.route.params.subscribe(params => {
-      console.log(this.getDetails(params['id']));
-    });
+  constructor(private route: ActivatedRoute, private productService: ProductsService) {
+     this.route.params.subscribe(params => {
+       this.productService.getProductById(params['id']).subscribe(
+         product => {
+           console.log(product);
+           this.available = product['disponible'] ? 'YES' : 'NO';
+           this.name = product['name'];
+           this.description = product['description'];
+           this.price = product['prix'];
+           this.views = data['products'][params['id'] - 1].views;
+           this.width = data['products'][params['id'] - 1].width;
+           this.height = data['products'][params['id'] - 1].height;
+           this.case = data['products'][params['id'] - 1].case;
+           this.depth = data['products'][params['id'] - 1].depth;
+           this.material = data['products'][params['id'] - 1].material;
+           this.src = data['products'][params['id'] - 1].views[0];
+
+          });
+     });
   }
 
   ngOnInit() {

@@ -2,34 +2,21 @@
     "products": [
         {
             "id": 1,
-            "name": "Lenovo IP320-15ISK-Black",
-            "description": "Intel Core I3 6006U, 2 GHZ - 3 Mo cache ,4 Go DDR3,Disque dur 1 To SATA, 15.6 pouce HD LED, Intel HD Graphics,FreeDos",
-            "price": "899DT",
-            "category": "PC",
-            "src": "src/assets/img/IP320-15ISK-Black_m.jpg",
-            "available": "YES",
-            "height": "50.6mm",
-            "width": "30.3mm",
+            "name": "Pc Portable HP Notebook 15-bw003nk Dual Core 4Go 500Go Noir (2YN15EA)",
+            "categoryName": "Ordinateur Portable",
+            "categoryDTO": {
+                "id": 1,
+                "name": "Ordinateur Portable",
+                "products": null
+            },
+            "prix": 559,
+            "disponible": true,
+            "description": "Ecran: 15.6 HD LED  Processeur:AMD E2-9000e(1,5 GHz Up To 2 GHz, 1 Mo de mémoire cache, Dual-Core) RAM: 4 Go DDR4 - Disque Dur: 500 Go ",
+            "dateSortie": 1542824446000,
+            "height": "38.6mm",
+            "width": "33.3mm",
             "depth": "10.5mm",
             "case": "40g",
-            "material": "Stainless Steel",
-            "views": [
-                "src/assets/img/IP320-15ISK-Black_m.jpg",
-                "src/assets/img/IP320-15ISK-Black_m.jpg"
-            ]
-        },
-        {
-            "id": 2,
-            "name": "hp 15-BS042NK",
-            "description": "Intel Core i7-7500 ,2.7GHz up to 3.5 GHz - 4 Mo cache ,8 Go DDR ,Disque dur 1 To SATA",
-            "price": "1479 DT",
-            "category": "PC",
-            "src": "src/assets/img/15-BS042NK_m.jpg",
-            "available": "YES",
-            "height": "38.6mm",
-            "width": "50.3mm",
-            "depth": "10.5mm",
-            "case": "50g",
             "material": "Stainless Steel",
             "views": [
                 "src/assets/img/15-BS042NK_m.jpg",
@@ -37,129 +24,210 @@
             ]
         },
         {
-            "id": 3,
-            "name": "Dell 3567-I7",
-            "description": "Intel Core i7-7500U ,2.7 GHz up 3.5 GHZ - 4 Mo cache ,8 Go DDR4, Disque dur 1 To SATA ,15.6 pouce HD LED",
-            "price": "1609 DT",
-            "category": "PC",
-            "src": "src/assets/img/3567-I7_m.jpg",
-            "available": "NO",
+            "id": 2,
+            "name": "Pc Portable LENOVO IP 110-15IBR Dual Core 4Go 500Go (80T7004PFG)",
+            "categoryName": "Ordinateur Portable",
+            "categoryDTO": {
+                "id": 1,
+                "name": "Ordinateur Portable",
+                "products": null
+            },
+            "prix": 575,
+            "disponible": null,
+            "description": "Ecran 15.6\" HD LED, Intel Celeron Dual Core N3060 (1.60 GHz up to 2,48 GHz ,2Mo mémoire cache), RAM: 4Go, Disque Dur: 500Go",
+            "dateSortie": 1542834903000,
             "height": "38.6mm",
             "width": "33.3mm",
             "depth": "10.5mm",
             "case": "40g",
             "material": "Stainless Steel",
             "views": [
-                "src/assets/img/3567-I7_m.jpg",
-                "src/assets/img/3567-I7_m.jpg"
+                "src/assets/img/lenovo.jpg",
+                "src/assets/img/lenovo.jpg"
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Pc Portable HP STREAM 11-y000nk Dual Core 2Go 32Go Bleu (Y3W44EA)",
+            "categoryName": "Ordinateur Portable",
+            "categoryDTO": {
+                "id": 1,
+                "name": "Ordinateur Portable",
+                "products": null
+            },
+            "prix": 692,
+            "disponible": true,
+            "description": "Ecran 11,6\" HD LED - Processeur: Intel® Celeron® N3060 (1,6 GHz, jusqu à 2,48 GHz, 2 Mo de mémoire cache, 2 cœurs)  RAM: 4Go, Disque Dur: 500Go",
+            "dateSortie": 1542835026000,
+            "height": "38.6mm",
+            "width": "33.3mm",
+            "depth": "10.5mm",
+            "case": "40g",
+            "material": "Stainless Steel",
+            "views": [
+                "src/assets/img/hp.jpg",
+                "src/assets/img/hp.jpg"
             ]
         },
         {
             "id": 4,
-            "name": "Asus GS043T",
-            "description": ".Intel Core i7-7500U ,up to 3.5 Ghz - 4 Mo cache , 16 Go DDR3, Disque dur 512 Go SSD SATA , 12.5 pouce HD LED",
-            "price": "3989 DT",
-            "category": "PC",
-            "src": "src/assets/img/GS043T_m.jpg",
-            "available": "YES",
+            "name": "PC Portable LENOVO IP330-15IGM Dual Core 4Go 500Go Noir (81D100B9FG)",
+            "categoryName": "Ordinateur Portable",
+            "categoryDTO": {
+                "id": 1,
+                "name": "Ordinateur Portable",
+                "products": null
+            },
+            "prix": 752,
+            "disponible": true,
+            "description": "Ecran 15.6\" LED HD (1366 x 768) - Processeur: Intel Celeron N4000 (1.10 GHz Up To 2.60 GHz) RAM: 4Go, Disque Dur: 500Go",
+            "dateSortie": 1542835129000,
             "height": "38.6mm",
             "width": "33.3mm",
             "depth": "10.5mm",
             "case": "40g",
             "material": "Stainless Steel",
             "views": [
-                "src/assets/img/GS043T_m.jpg",
-                "src/assets/img/GS043T_m.jpg"
+                "src/assets/img/lenovo.jpg",
+                "src/assets/img/lenovo.jpg"
             ]
         },
         {
             "id": 5,
-            "name": "Asus GL753VD-GB223T",
-            "description": "Intel Core i7 7700HQ , 2.8/3.8 Turbo Ghz - 6 Mo cache ,16 Go DDR4, Disque dur 1To SATA, 17.3 pouce FULL HD , NVIDIA GeForce GTX 1050,  4 Go dédiés",
-            "price": "3199 DT",
-            "category": "PC",
-            "src": "src/assets/img/GL753VD-GB223T_g.jpg",
-            "available": "YES",
+            "name": "Clavier HP",
+            "categoryName": "Périphérique",
+            "categoryDTO": {
+                "id": 2,
+                "name": "Périphérique",
+                "products": null
+            },
+            "prix": 53,
+            "disponible": true,
+            "description": "Clavier HP Sans Fil",
+            "dateSortie": 1542846115000,
             "height": "38.6mm",
             "width": "33.3mm",
             "depth": "10.5mm",
             "case": "40g",
             "material": "Stainless Steel",
             "views": [
-                "src/assets/img/GL753VD-GB223T_g.jpg",
-                "src/assets/img/GL753VD-GB223T_g.jpg"
+                "src/assets/img/clavier.jpeg",
+                "src/assets/img/clavier.jpeg"
             ]
         },
         {
             "id": 6,
-            "name": "Lenovo Y520-15IKBN-i7",
-            "description": "Garantie 2 an ,Ecran 15.6Full HD IPS LED  ,Processeur Intel Core i7-7700HQ, up to 3.80 GHz, 6 Mo de mémoire cache",
-            "price": "2249 DT",
-            "category": "PC",
-            "src": "src/assets/img/Y520-15IKBN-i7_g.jpg",
-            "available": "YES",
+            "name": "Disque Dur Dell",
+            "categoryName": "Stockage",
+            "categoryDTO": {
+                "id": 3,
+                "name": "Stockage",
+                "products": null
+            },
+            "prix": 102,
+            "disponible": true,
+            "description": "Disque Dur Dell 1 TO",
+            "dateSortie": 1542846184000,
             "height": "38.6mm",
             "width": "33.3mm",
             "depth": "10.5mm",
             "case": "40g",
             "material": "Stainless Steel",
             "views": [
-                "src/assets/img/Y520-15IKBN-i7_g.jpg",
-                "src/assets/img/Y520-15IKBN-i7_g.jpg"
+                "src/assets/img/dd.jpeg",
+                "src/assets/img/dd.jpeg"
             ]
         },
         {
             "id": 7,
-            "name": "Ricoh SP201Nw",
-            "description": "imprimante laser monochrome sp 201 NW",
-            "price": "199 DT",
-            "category": "imprimante",
-            "src": "src/assets/img/SP201Nw_g.jpg",
-            "available": "YES",
+            "name": "Serveur LENOVO SYSTEM X3250 M6 E3-1220 8Go (3633-ENG)",
+            "categoryName": "Serveurs",
+            "categoryDTO": {
+                "id": 4,
+                "name": "Serveurs",
+                "products": null
+            },
+            "prix": 2000,
+            "disponible": true,
+            "description": "Serveur LENOVO SYSTEM X3250 M6 - Format: Rack 1U -Intel Xeon E3-1220 v6 4C (3.0 GHz up to 3.5 GHz, 8 Mo de mémoire cache, 4 cœurs) - Mémoire: 8Go DDR4 2400 MHz",
+            "dateSortie": 1542846292000,
             "height": "38.6mm",
             "width": "33.3mm",
             "depth": "10.5mm",
             "case": "40g",
             "material": "Stainless Steel",
             "views": [
-                "src/assets/img/SP201Nw_g.jpg",
-                "src/assets/img/SP201Nw_g.jpg"
+                "src/assets/img/server.jpeg",
+                "src/assets/img/server.jpeg"
             ]
         },
         {
             "id": 8,
-            "name": "EPSON L3050",
-            "description": "EPSON imprimante L3050  wifi A4 3en1 couleur USB, wifi ,+2 Bouteille Noir Offerte",
-            "price": "599 DT",
-            "category": "imprimante",
-            "src": "src/assets/img/L3050_m.jpg",
-            "available": "YES",
+            "name": "iPhone X 64Go - SpaceGrey ",
+            "categoryName": "Smart Phone & Mobile",
+            "categoryDTO": {
+                "id": 5,
+                "name": "Smart Phone & Mobile",
+                "products": null
+            },
+            "prix": 3200,
+            "disponible": true,
+            "description": "Ecran 5,8\" Super Retina HD 3D Touch-Face ID - -Resolution :2436 x 1125 pixels- Processeur: Apple A11 Bionic Hexa-core 2,39 GHz  RAM 3 Go",
+            "dateSortie": 1542846465000,
             "height": "38.6mm",
             "width": "33.3mm",
             "depth": "10.5mm",
             "case": "40g",
             "material": "Stainless Steel",
             "views": [
-                "src/assets/img/L3050_m.jpg",
-                "src/assets/img/L3050_m.jpg"
+                "src/assets/img/iphone.jpeg",
+                "src/assets/img/iphone.jpeg"
             ]
         },
         {
             "id": 9,
-            "name": "hp Wireless-415",
-            "description": "Imprimez à des volumes élevés pour un coût par page extrêmement faible et bénéficiez d'une impression mobile facile.",
-            "price": "429 DT",
-            "category": "imprimante",
-            "src": "src/assets/img/Wireless-415_m.jpg",
-            "available": "NO",
+            "name": "Câble Iphone INKAX CK-49 data 3m White ",
+            "categoryName": "Accesoires Téléphonie",
+            "categoryDTO": {
+                "id": 6,
+                "name": "Accesoires Téléphonie",
+                "products": null
+            },
+            "prix": 66,
+            "disponible": true,
+            "description": "Câble Iphone INKAX CK-49 data 3m White ",
+            "dateSortie": 1542846541000,
             "height": "38.6mm",
             "width": "33.3mm",
             "depth": "10.5mm",
             "case": "40g",
             "material": "Stainless Steel",
             "views": [
-                "src/assets/img/Wireless-415_m.jpg",
-                "src/assets/img/Wireless-415_m.jpg"
+                "src/assets/img/cable.jpg",
+                "src/assets/img/cable.jpg"
+            ]
+        },
+        {
+            "id": 10,
+            "name": "Carte Graphique GeForce MANLI GT730 4Go DDR3 ",
+            "categoryName": "Composants Informatique",
+            "categoryDTO": {
+                "id": 7,
+                "name": "Composants Informatique",
+                "products": null
+            },
+            "prix": 66,
+            "disponible": true,
+            "description": "Carte Graphique MANLI GeForce GT730  - Bus Standard: PCI-Express 2.0 - CUDA Cores: 96 - Taille mémoire vidéo: 4Go (4096 Mo)-  DDR3 - 64 Bits - Interfaces: 1 x Dual-Link DVI-I , 1 x HDMI , 1 x VGA",
+            "dateSortie": 1542846660000,
+            "height": "38.6mm",
+            "width": "33.3mm",
+            "depth": "10.5mm",
+            "case": "40g",
+            "material": "Stainless Steel",
+            "views": [
+                "src/assets/img/carteGra.jpg",
+                "src/assets/img/carteGra.jpg"
             ]
         }
     ]

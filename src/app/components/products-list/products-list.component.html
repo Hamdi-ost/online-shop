@@ -23,7 +23,7 @@
             <div class="products-content">
                 <div class="products-wrapper">
                     <div class="row nopadding">
-                        <div class="col-sm-4" *ngFor="let prod of product | filter : searchText">
+                        <div class="col-sm-4" *ngFor="let prod of products[0] | filter : searchText">
                             <div class="product-shortcode style-1">
                                 <div class="title">
                                     <div class="simple-article size-1 color col-xs-b5"><a href="#">{{prod.category}}</a></div>
@@ -54,7 +54,7 @@
                                         <div class="entry" style="color: #50e3f0;"></div>
                                         <div class="entry" style="color: #eee;"></div>
                                     </div>
-                                    <div class="simple-article size-4"><span class="color">{{prod.price}}</span>&nbsp;&nbsp;&nbsp;</div>
+                                    <div class="simple-article size-4"><span class="color">{{prod.prix}}DT</span>&nbsp;&nbsp;&nbsp;</div>
                                 </div>
                                 <div class="description">
                                     <div class="simple-article text size-2">{{prod.description}}</div>

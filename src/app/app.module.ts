@@ -18,16 +18,24 @@ import { FilterPipe } from './filter.pipe';
 import { ProductDetailsComponent } from './components/products-list/product-details/product-details.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import {NgxPaginationModule } from 'ngx-pagination';
+import { HttpClientModule } from '@angular/common/http';
+import { CoreModule } from './core/core.module';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+import { UserProfilComponent } from './components/user-profil/user-profil.component';
+import { AuthGuard } from './core/auth.guard';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 
 const appRoutes: Routes = [
 
-  { path: 'home', component: HomeComponent },
+  { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'about', component: AboutComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'products', component: ProductsListComponent },
   { path: 'products/:id', component: ProductDetailsComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'profile', component: UserProfilComponent },
   { path: 'not-found', component: ErrorComponent },
   { path: '', component: HomeComponent },
 
@@ -50,15 +58,20 @@ const appRoutes: Routes = [
     LastRowComponent,
     FilterPipe,
     ProductDetailsComponent,
-    SidebarComponent
+    SidebarComponent,
+    UserProfilComponent
   ],
   imports: [
+    HttpClientModule,
     FormsModule,
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    NgxPaginationModule
+    NgxPaginationModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    CoreModule,
+    AngularFireDatabaseModule
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
