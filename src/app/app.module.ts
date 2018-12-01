@@ -18,6 +18,7 @@ import { FilterPipe } from './filter.pipe';
 import { ProductDetailsComponent } from './components/products-list/product-details/product-details.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import {NgxPaginationModule } from 'ngx-pagination';
+import { DetailsComponent } from './components/products-list/details/details.component';
 
 const appRoutes: Routes = [
 
@@ -26,6 +27,7 @@ const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'products', component: ProductsListComponent },
+  { path: 'products/laptops', component: DetailsComponent },
   { path: 'products/:id', component: ProductDetailsComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'not-found', component: ErrorComponent },
@@ -50,7 +52,8 @@ const appRoutes: Routes = [
     LastRowComponent,
     FilterPipe,
     ProductDetailsComponent,
-    SidebarComponent
+    SidebarComponent,
+    DetailsComponent
   ],
   imports: [
     FormsModule,

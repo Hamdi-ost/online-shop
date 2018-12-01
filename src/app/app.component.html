@@ -2,6 +2,7 @@
 <div class="content-block">
   <app-navbar></app-navbar>
   <div class="header-empty-space"></div>
+  <app-sidebar *ngIf="loadedFeature == 'products' "></app-sidebar>
   <router-outlet></router-outlet>
 </div>
 
