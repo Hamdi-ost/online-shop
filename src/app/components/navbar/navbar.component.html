@@ -3,13 +3,13 @@
     <div class="content-margins">
       <div class="row">
         <div class="col-md-5 hidden-xs hidden-sm">
-          <div class="entry"><b>contact us:</b> <a href="tel:+35235551238745">+3 (523) 555 123 8745</a></div>
-          <div class="entry"><b>email:</b> <a href="mailto:office@exzo.com">office@RT4.com</a></div>
+          <div class="entry"><b>contact us:</b> <a >+3 (523) 555 123 8745</a></div>
+          <div class="entry"><b>email:</b> <a >office@RT4.com</a></div>
         </div>
         <div class="col-md-7 col-md-text-right">
-          <div  class="entry"><a class="open-popup" data-rel="1"><b>login</b></a>&nbsp;
+          <div *ngIf="!exist" class="entry"><a (click)="authExist()" class="open-popup" data-rel="1"><b>login</b></a>&nbsp;
             or &nbsp;<a class="open-popup" data-rel="2"><b>register</b></a></div>
-          <div  class="entry"><a (click)="auth.signOut()"><b>logout</b></a></div>
+          <div *ngIf="auth.user | async" class="entry"><a (click)="authExist()" (click)="auth.signOut()"><b>logout</b></a></div>
           <div class="entry language">
             <div><b>en</b></div>
           </div>
@@ -17,6 +17,61 @@
             <span></span>
             <span></span>
             <span></span>
+          </div>
+          <div *ngIf="auth.user | async" class="entry hidden-xs hidden-sm cart">
+            <a>
+              <b class="hidden-xs">Your bag</b>
+              <span class="cart-icon">
+                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                <span class="cart-label">{{orders.length}}</span>
+              </span>
+              <span class="cart-title hidden-xs">{{total}}DT</span>
+            </a>
+            <div class="cart-toggle hidden-xs hidden-sm">
+              <div class="cart-overflow">
+                <div *ngFor="let order of orders" class="cart-entry clearfix">
+                  <a class="cart-entry-thumbnail" ><img src="../../../assets/img/{{order.img}}" alt=""></a>
+                  <div class="cart-entry-description">
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div class="h6"><a >{{order.name}}</a></div>
+                            <div class="simple-article size-1">QUANTITY: {{order.quantity}}</div>
+                          </td>
+                          <td>
+                            <div class="simple-article size-3 grey">{{order.prixUnitaire}}DT</div>
+                            <div class="simple-article size-1">TOTAL: {{order.total}}</div>
+                          </td>
+                          <td>
+                            <div class="cart-color" style="background: red;"></div>
+                          </td>
+                          <td>
+                            <div class="button-close" (click)="deleteItem(1)"></div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="empty-space col-xs-b40"></div>
+              <div class="row">
+                <div class="col-xs-6">
+                  <div class="cell-view empty-space col-xs-b50">
+                    <div class="simple-article size-5 grey">TOTAL <span class="color">{{total}}DT</span></div>
+                  </div>
+                </div>
+                <div class="col-xs-6 text-right">
+                  <a class="button size-2 style-3" routerLink="/checkout">
+                    <span class="button-wrapper">
+                      <span class="icon"><img src="../../../assets/img/icon-4.png" alt=""></span>
+                      <span class="text">proceed to checkout</span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -26,7 +81,7 @@
     <div class="content-margins">
       <div class="row">
         <div class="col-xs-3 col-sm-1">
-          <a id="logo" href="index1.html"><img src="../../../assets/img/logo-2.png" alt=""></a>
+          <a id="logo" ><img src="../../../assets/img/logo-2.png" alt=""></a>
         </div>
         <div class="col-xs-9 col-sm-11 text-right">
           <div class="nav-wrapper">
@@ -43,6 +98,7 @@
                   <a routerLink="/products">products</a>
                 </li>
                 <li><a routerLink="/contact">contact</a></li>
+                <li><a *ngIf="auth.user | async " routerLink="/profile">profile</a></li>
               </ul>
 
             </nav>

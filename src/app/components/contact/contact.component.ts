@@ -25,7 +25,6 @@ export class ContactComponent implements OnInit {
     const formRequest = { name, email, subject, message};
     this.af.list('/messages').push(formRequest);
     console.log();
-    
     form.reset();
   }
 

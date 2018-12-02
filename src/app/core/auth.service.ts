@@ -20,6 +20,7 @@ interface User {
 @Injectable({ providedIn: 'root' })
 export class AuthService {
 
+
   user: Observable<User>;
   auth = false;
   constructor(

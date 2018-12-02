@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 import { AuthService } from '../../core/auth.service';
+import { OrderService } from 'src/app/services/order.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,17 +8,27 @@ import { AuthService } from '../../core/auth.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  orders = [];
+  total;
+  exist;
+  constructor(public auth: AuthService, private orderService: OrderService) {
+  }
 
-  exist = false;
-  constructor(public auth: AuthService) {
-    if (auth.user) {
-      this.exist = true;
-    } else {
-      this.exist = false;
-    }
-   }
 
   ngOnInit() {
+    this.exist = this.auth.auth;
+    this.orders = this.orderService.getCart();
+    this.total = this.orderService.getTotal();
   }
+
+  authExist() {
+    this.exist = !this.exist;
+  }
+
+  deleteItem (id) {
+    this.orderService.deleteOrder(id);
+    this.orderService.getCart();
+  }
+
 
 }

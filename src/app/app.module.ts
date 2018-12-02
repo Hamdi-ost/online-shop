@@ -25,17 +25,19 @@ import { environment } from '../environments/environment';
 import { UserProfilComponent } from './components/user-profil/user-profil.component';
 import { AuthGuard } from './core/auth.guard';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { CheckoutComponent } from './components/checkout/checkout.component';
 
 const appRoutes: Routes = [
 
-  { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'products', component: ProductsListComponent },
   { path: 'products/:id', component: ProductDetailsComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'profile', component: UserProfilComponent },
+  { path: 'profile', component: UserProfilComponent, canActivate: [AuthGuard] },
+  { path: 'checkout', component: CheckoutComponent, canActivate: [AuthGuard] },
   { path: 'not-found', component: ErrorComponent },
   { path: '', component: HomeComponent },
 
@@ -59,7 +61,8 @@ const appRoutes: Routes = [
     FilterPipe,
     ProductDetailsComponent,
     SidebarComponent,
-    UserProfilComponent
+    UserProfilComponent,
+    CheckoutComponent
   ],
   imports: [
     HttpClientModule,

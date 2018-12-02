@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import * as data from '../../../../assets/produits.json';
 import { ActivatedRoute } from '@angular/router';
 import { ProductsService } from 'src/app/services/products.service.js';
+import { OrderService } from 'src/app/services/order.service.js';
 
 @Component({
   selector: 'app-product-details',
@@ -10,6 +11,7 @@ import { ProductsService } from 'src/app/services/products.service.js';
 })
 export class ProductDetailsComponent implements OnInit {
 
+  id;
   name: string;
   description: string;
   price: string;
@@ -26,11 +28,11 @@ export class ProductDetailsComponent implements OnInit {
 
 
 
-  constructor(private route: ActivatedRoute, private productService: ProductsService) {
+  constructor(private route: ActivatedRoute, private productService: ProductsService, private orderService: OrderService) {
      this.route.params.subscribe(params => {
        this.productService.getProductById(params['id']).subscribe(
          product => {
-           console.log(product);
+           this.id = params['id'];
            this.available = product['disponible'] ? 'YES' : 'NO';
            this.name = product['name'];
            this.description = product['description'];
@@ -48,6 +50,12 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  addToCart() {
+    const productToOrder = {id: this.id, name: this.name, quantity: 1, prixUnitaire: this.price, total: this.price, img: this.src};
+    this.orderService.addToCart(productToOrder);
+    console.log(this.orderService.getCart());
   }
 
 }
