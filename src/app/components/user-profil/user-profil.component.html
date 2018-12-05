@@ -19,9 +19,12 @@
 <ng-template #authenticated>
 <div *ngIf="auth.user | async as user">
   <h3>Howdy, {{ user.displayName }}</h3>
+  <button class="btn-primary" (click)="getCommande()">send</button>
   <img  [src]="user.photoURL">
   <p>UID: {{ user.uid }}</p>
   <p>Favorite Color: {{ user?.favoriteColor }} </p>
   <button (click)="auth.signOut()">Logout</button>
 </div>
 </ng-template>
+
+<app-commande-table></app-commande-table>

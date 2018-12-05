@@ -49,7 +49,7 @@ export class AuthService {
   private oAuthLogin(provider) {
     return this.afAuth.auth.signInWithPopup(provider)
       .then((credential) => {
-        this.router.navigateByUrl('/home');
+        location.reload();
         this.auth = true;
         this.updateUserData(credential.user);
       });

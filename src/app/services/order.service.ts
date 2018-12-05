@@ -7,6 +7,7 @@ export class OrderService {
 
    order = [
      {id: 1, name: 'MODERN BEAT HT', quantity: 2, prixUnitaire: 155.00, total: 310.00, img: 'product-1.png'},
+     {id: 2, name: 'MODERN BEAT HT', quantity: 2, prixUnitaire: 155.00, total: 310.00, img: 'product-1.png'},
    ];
 
   // order = [];

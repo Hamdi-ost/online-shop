@@ -26,6 +26,12 @@ import { UserProfilComponent } from './components/user-profil/user-profil.compon
 import { AuthGuard } from './core/auth.guard';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { CheckoutComponent } from './components/checkout/checkout.component';
+import { FlashMessagesModule } from 'angular2-flash-messages';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatTableModule} from '@angular/material/table';
+import { CommandeTableComponent } from './commande-table/commande-table.component';
+import { MatPaginatorModule, MatSortModule } from '@angular/material';
+
 
 const appRoutes: Routes = [
 
@@ -62,9 +68,13 @@ const appRoutes: Routes = [
     ProductDetailsComponent,
     SidebarComponent,
     UserProfilComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    CommandeTableComponent
   ],
   imports: [
+    MatTableModule,
+    BrowserAnimationsModule,
+    FlashMessagesModule.forRoot(),
     HttpClientModule,
     FormsModule,
     BrowserModule,
@@ -72,7 +82,9 @@ const appRoutes: Routes = [
     NgxPaginationModule,
     AngularFireModule.initializeApp(environment.firebase),
     CoreModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]
