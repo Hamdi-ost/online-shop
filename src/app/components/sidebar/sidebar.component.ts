@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductsService } from '../../services/products.service';
+import * as data from '../../../assets/produits.json';
+import { CategoriesService } from '../../services/categories.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,10 +10,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
     
-  names = ["ASUS","DELL","HP" ];
-  constructor() { }
+  categories = ["Composants Informatique",
+    "Ordinateur Portable",
+    "Périphérique", 
+    "Smart Phone & Mobile",
+    "Serveurs",
+    "Stockage",
+    "Accesoires Téléphonie"];
 
+    constructor( ) {
+     
+     }
+     
   ngOnInit() {
   }
 
-}
+
+  indexof(str:string)
+{
+return this.categories.indexOf(str)+1;
+}}

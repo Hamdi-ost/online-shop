@@ -1,63 +1,11 @@
 
 <div class="col-md-3 col-lg-pull-9">
-    <div class="h4 col-xs-b10">popular categories</div>
-    <ul class="categories-menu transparent" >
+    <div class="h4 col-xs-b10"  >popular categories</div>
+    <ul class="categories-menu transparent"  *ngFor="let cat of categories" >
       <li>
-        <a routerLink="products/laptops">laptops &amp; computers</a>
-        <div class="toggle"></div>
-        <ul >
-          <li>
-            <a routerLink="laptops/portable"> PC Portable </a>
-            <div class="toggle" ></div>
-            <ul >
-              <li>
-                <a routerLink="/products/laptops/portable/asus">ASUS</a>
-              </li>
-              <li>
-                <a routerLink="/products/laptops/portable/dell"> DELL </a>
-              </li>
-              <li>
-                <a routerLink="/products/laptops/portable/hp"> HP </a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a routerLink="/products/laptops/bureau"> Bureau</a>
-          </li>
-        </ul>   
+          <a routerLink= "products/{{indexof(cat)}}" > {{cat}} </a>
       </li>
-      <li>
-          <a routerLink="/products/tablette"> Tablette </a>
-        </li>
-  
-      <li>
-        <a routerLink="/products/smartphones">smartphones</a>
-        <div class="toggle"></div>
-        <ul>
-            <li>
-                <a routerLink="/products/smartphones/android">android</a>
-                <div class="toggle"></div>
-                <ul>
-                  <li>
-                    <a routerLink="/products/smartphones/android/samsung"> SAMSUNG </a>
-                  <li>
-                  <li>
-                    <a routerLink="/products/smartphones/android/huawei"> Huawei </a>
-                  </li>
-                  <li>
-                    <a routerLink="/products/smartphones/android/nokia"> nokia </a>
-                  </li> 
-                </ul>      
-     
-            </li>
-  
-          <li>
-            <a routerLink="/products/smartphones/ios">ios</a>
-          </li>
-        </ul>
-      </li>
-  
-    </ul>
+    </ul> 
     <div class="empty-space col-xs-b25 col-sm-b50"></div>
   
     <div class="h4 col-xs-b25">Price</div>

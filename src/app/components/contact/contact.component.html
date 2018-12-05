@@ -115,3 +115,106 @@
   <div class="empty-space col-xs-b35 col-md-b70"></div>
   <div class="empty-space col-xs-b35 col-md-b70"></div>
 
+
+  <!--inner header start-->
+<div class="main-heading-contact">
+  <div class="">
+  </div>
+</div>
+
+<!--Section: Contact v.1-->
+<section class="section pb-5 container">
+  <br><br>
+  <!--Section heading-->
+  <h2 class="section-heading h1 pt-4">Contact us</h2>
+  <!--Section description-->
+  <h4 class="section-heading h5 pt-4">Please feel free to reach out to us</h4>
+
+  <div class="row">
+
+    <!--Grid column-->
+    <div class="col-lg-5 mb-4">
+
+      <!--Form with header-->
+      <div class="card">
+
+        <div class="card-body">
+          <!--Header-->
+          <div class="form-header blue accent-1">
+            <h3><i class="fa fa-envelope"></i> Write to us:</h3>
+          </div>
+
+          <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+            <!--Body-->
+            <div class="md-form">
+              <i style="padding-right: 12px" class="fa fa-user prefix grey-text"></i> <label for="form3" >Your name</label>
+              <input mdbActive type="text" id="form3" ngModel name="name" required class="form-control">
+
+            </div>
+
+            <div class="md-form">
+              <i style="padding-right: 2px" class="fa fa-envelope prefix grey-text"></i> <label for="form2">Your email</label>
+              <input mdbActive type="text" id="form2" required class="form-control" ngModel #email="ngModel" name="email"
+                email>
+
+            </div>
+
+            <div class="md-form">
+              <i style="padding-right: 2px" class="fa fa-tag prefix grey-text"></i><label for="form34">Subject</label>
+              <input mdbActive type="text" id="form32" required class="form-control" ngModel name="subject">
+
+            </div>
+
+            <div class="md-form">
+              <i style="padding-right: 2px" class="fa fa-pencil prefix grey-text"></i> <label for="form8">Icon Prefix</label>
+              <textarea mdbActive type="text" id="form8" required class="md-textarea form-control" ngModel name="content"></textarea>
+
+            </div>
+
+            <div class="text-center">
+              <button type="submit" [disabled]="!f.valid" class="btn btn-elegant waves-light" mdbRippleRadius>Submit</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+      <!--Form with header-->
+
+    </div>
+    <!--Grid column-->
+
+    <!--Grid column-->
+    <div class="col-lg-7">
+
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.982591213649!2d10.19400795038571!3d36.842892979841324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd34c6d1e93bef%3A0x4153c4733f285343!2sInstitut+national+des+sciences+appliqu%C3%A9es+et+de+technologie!5e0!3m2!1sfr!2stn!4v1542792170229"
+           width="650" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+
+      <br>
+      <!--Buttons-->
+      <div class="row text-center">
+        <div class="col-md-4">
+          <a class="btn-floating blue accent-1 waves-light" mdbRippleRadius><i class="fa fa-map-marker"></i></a>
+          <p>Centre Urbain Nord BP 676 Tunis</p>
+          <p>Tunis, Tunisia</p>
+        </div>
+
+        <div class="col-md-4">
+          <a class="btn-floating blue accent-1 waves-light" mdbRippleRadius><i class="fa fa-phone"></i></a>
+          <p>+216 99 346 808</p>
+          <p></p>
+        </div>
+
+        <div style ="margin-left: -20px" class="col-md-4">
+          <a class="btn-floating blue accent-1 waves-light" mdbRippleRadius><i class="fa fa-envelope"></i></a>
+          <p>Junior.entreprise.insat@gmail.com</p>
+        </div>
+      </div>
+
+    </div>
+    <!--Grid column-->
+
+  </div>
+
+
