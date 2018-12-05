@@ -26,13 +26,20 @@ import { environment } from '../environments/environment';
 import { UserProfilComponent } from './components/user-profil/user-profil.component';
 import { AuthGuard } from './core/auth.guard';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { FlashMessagesModule } from 'angular2-flash-messages';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatTableModule} from '@angular/material/table';
+import { CommandeTableComponent } from './commande-table/commande-table.component';
+import { MatPaginatorModule, MatSortModule } from '@angular/material';
+
 
 
 
 
 const appRoutes: Routes = [
 
-  { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
@@ -40,7 +47,8 @@ const appRoutes: Routes = [
   { path: 'products/:categor', component: ProductsCategoryComponent },
   { path: 'products/:id', component: ProductDetailsComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'profile', component: UserProfilComponent },
+  { path: 'profile', component: UserProfilComponent, canActivate: [AuthGuard] },
+  { path: 'checkout', component: CheckoutComponent, canActivate: [AuthGuard] },
   { path: 'not-found', component: ErrorComponent },
   { path: '', component: HomeComponent },
   { path: '**', redirectTo: 'not-found' }
@@ -62,11 +70,16 @@ const appRoutes: Routes = [
     LastRowComponent,
     FilterPipe,
     ProductDetailsComponent,
+    ProductsCategoryComponent,
     SidebarComponent,
     UserProfilComponent,
-    ProductsCategoryComponent
+    CommandeTableComponent,
+    CheckoutComponent
   ],
   imports: [
+    MatTableModule,
+    BrowserAnimationsModule,
+    FlashMessagesModule.forRoot(),
     HttpClientModule,
     FormsModule,
     BrowserModule,
@@ -74,7 +87,9 @@ const appRoutes: Routes = [
     NgxPaginationModule,
     AngularFireModule.initializeApp(environment.firebase),
     CoreModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]
