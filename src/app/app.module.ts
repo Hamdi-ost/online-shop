@@ -8,6 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { ErrorComponent } from './components/error/error.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
+import { ProductsCategoryComponent } from './components/products-list/products-category/products-category.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { LoginComponent } from './components/login/login.component';
@@ -33,6 +34,9 @@ import { CommandeTableComponent } from './commande-table/commande-table.componen
 import { MatPaginatorModule, MatSortModule } from '@angular/material';
 
 
+
+
+
 const appRoutes: Routes = [
 
   { path: 'home', component: HomeComponent },
@@ -40,13 +44,13 @@ const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'products', component: ProductsListComponent },
+  { path: 'products/:categor', component: ProductsCategoryComponent },
   { path: 'products/:id', component: ProductDetailsComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'profile', component: UserProfilComponent, canActivate: [AuthGuard] },
   { path: 'checkout', component: CheckoutComponent, canActivate: [AuthGuard] },
   { path: 'not-found', component: ErrorComponent },
   { path: '', component: HomeComponent },
-
   { path: '**', redirectTo: 'not-found' }
 ];
 
@@ -66,10 +70,11 @@ const appRoutes: Routes = [
     LastRowComponent,
     FilterPipe,
     ProductDetailsComponent,
+    ProductsCategoryComponent,
     SidebarComponent,
     UserProfilComponent,
-    CheckoutComponent,
-    CommandeTableComponent
+    CommandeTableComponent,
+    CheckoutComponent
   ],
   imports: [
     MatTableModule,

@@ -7,4 +7,9 @@ import { Component } from '@angular/core' ;
 })
 export class AppComponent {
   title = 'JEISITE';
+  loadedFeature="products";
+
+  onNavigate(feature){
+    this.loadedFeature=feature;
+  }
 }
