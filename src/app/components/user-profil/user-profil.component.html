@@ -1,6 +1,18 @@
 <div *ngIf="auth.user | async; then authenticated else guest">
-  <!-- template will replace this div -->
-</div>
+<!-- User logged in -->
+<ng-template #authenticated>
+  <div class="card" *ngIf="auth.user | async as user">
+    <img [src]="user.photoURL" alt="John" style="width:100%">
+    <h1>{{ user.displayName }}</h1>
+    <p class="title">UID: {{ user.uid }}</p>
+    <p>Harvard University</p>
+    <a href="#"><i class="fa fa-dribbble"></i></a> 
+    <a href="#"><i class="fa fa-twitter"></i></a> 
+    <a href="#"><i class="fa fa-linkedin"></i></a> 
+    <a href="#"><i class="fa fa-facebook"></i></a> 
+    <p><button>Contact</button></p>
+  </div>
+  </ng-template></div>
 
 
 <!-- User NOT logged in -->
@@ -17,14 +29,17 @@
 
 <!-- User logged in -->
 <ng-template #authenticated>
-<div *ngIf="auth.user | async as user">
-  <h3>Howdy, {{ user.displayName }}</h3>
-  <button class="btn-primary" (click)="getCommande()">send</button>
-  <img  [src]="user.photoURL">
-  <p>UID: {{ user.uid }}</p>
-  <p>Favorite Color: {{ user?.favoriteColor }} </p>
-  <button (click)="auth.signOut()">Logout</button>
-</div>
-</ng-template>
+  <div class="card" *ngIf="auth.user | async as user">
+    <img [src]="user.photoURL" alt="John" style="width:100%">
+    <h1>{{ user.displayName }}</h1>
+    <p class="title">UID: {{ user.uid }}</p>
+    <a href="#"><i class="fa fa-dribbble"></i></a> 
+    <a href="#"><i class="fa fa-twitter"></i></a> 
+    <a href="#"><i class="fa fa-linkedin"></i></a> 
+    <a href="#"><i class="fa fa-facebook"></i></a> 
+    <p><button>Contact</button></p>
+  </div>
+  </ng-template>
+
 
 <app-commande-table></app-commande-table>
