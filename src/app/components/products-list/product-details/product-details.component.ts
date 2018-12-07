@@ -49,7 +49,8 @@ export class ProductDetailsComponent implements OnInit {
           this.depth = data['products'][params['id'] - 1].depth;
           this.material = data['products'][params['id'] - 1].material;
           this.src = data['products'][params['id'] - 1].views[0];
-
+          console.log(this.views);
+          
         });
     });
   }

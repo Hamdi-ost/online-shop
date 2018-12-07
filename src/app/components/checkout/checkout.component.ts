@@ -34,7 +34,7 @@ export class CheckoutComponent implements OnInit {
     const date = new Date().toJSON().slice(0, 10).replace(/-/g, '/');
     let key;
     this.commandeService.getCommande('mohamed.tounsi@gmail.com').subscribe( data => {
-      key = Number(data[data.length - 1]['reference'].substr(data[10]['reference'].indexOf('/') + 1, 2)) + 1;
+      key = Number(data[15]['reference'].substr(data[10]['reference'].indexOf('/') + 1, 2)) + 1;
      commande = {
         'reference': 'Ord625/' + key, date: 521554525, 'email': 'mohamed.tounsi@gmail.com', 'statut': 'new', 'productsId': this.productsId
       };

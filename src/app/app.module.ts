@@ -14,7 +14,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { LastRowComponent } from './components/last-row/last-row.component';
-import { FilterPipe } from './filter.pipe';
+import { FilterPipe } from './components/sidebar/filter.pipe';
 import { ProductDetailsComponent } from './components/products-list/product-details/product-details.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import {NgxPaginationModule } from 'ngx-pagination';
@@ -31,6 +31,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatTableModule} from '@angular/material/table';
 import { CommandeTableComponent } from './commande-table/commande-table.component';
 import { MatPaginatorModule, MatSortModule } from '@angular/material';
+import { ProductsCategoryComponent } from './components/products-list/products-category/products-category.component';
 
 
 const appRoutes: Routes = [
@@ -40,6 +41,7 @@ const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'products', component: ProductsListComponent },
+  { path: 'products/:cate/:categor', component: ProductsCategoryComponent },
   { path: 'products/:id', component: ProductDetailsComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'profile', component: UserProfilComponent, canActivate: [AuthGuard] },
@@ -69,7 +71,8 @@ const appRoutes: Routes = [
     SidebarComponent,
     UserProfilComponent,
     CheckoutComponent,
-    CommandeTableComponent
+    CommandeTableComponent,
+    ProductsCategoryComponent
   ],
   imports: [
     MatTableModule,
