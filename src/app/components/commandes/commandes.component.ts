@@ -13,7 +13,6 @@ import * as data from '../../../assets/produits.json';
 })
 export class CommandesComponent implements OnInit {
 
-<<<<<<< HEAD
   commandes;
   commande;
   ordredProducts;
@@ -28,11 +27,6 @@ export class CommandesComponent implements OnInit {
         this.ordredProducts = data['products'].filter(product => Number(product.id === this.commande[0].id));
       });
     });
-=======
-  constructor() { }
-
-  ngOnInit() {
->>>>>>> rahma
   }
 
 }
