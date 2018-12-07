@@ -29,8 +29,9 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
 import { FlashMessagesModule } from 'angular2-flash-messages';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatTableModule} from '@angular/material/table';
-import { CommandeTableComponent } from './commande-table/commande-table.component';
+import { CommandeTableComponent } from './components/commande-table/commande-table.component';
 import { MatPaginatorModule, MatSortModule } from '@angular/material';
+import { CommandesComponent } from './components/commandes/commandes.component';
 
 
 const appRoutes: Routes = [
@@ -41,6 +42,7 @@ const appRoutes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'products', component: ProductsListComponent },
   { path: 'products/:id', component: ProductDetailsComponent },
+  { path: 'commande/:id', component: CommandesComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'profile', component: UserProfilComponent, canActivate: [AuthGuard] },
   { path: 'checkout', component: CheckoutComponent, canActivate: [AuthGuard] },
@@ -69,7 +71,8 @@ const appRoutes: Routes = [
     SidebarComponent,
     UserProfilComponent,
     CheckoutComponent,
-    CommandeTableComponent
+    CommandeTableComponent,
+    CommandesComponent
   ],
   imports: [
     MatTableModule,

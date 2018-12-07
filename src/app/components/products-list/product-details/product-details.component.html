@@ -28,7 +28,7 @@
           <div class="h3 col-xs-b25">{{name}}</div>
           <div class="row col-xs-b25">
             <div class="col-sm-6">
-              <div class="simple-article size-5 grey">PRICE: <span class="color">{{ price }}</span></div>
+              <div class="simple-article size-5 grey">PRICE: <span class="color">{{ price }} DT</span></div>
             </div>
             <div class="col-sm-6 col-sm-text-right">
               <div class="rate-wrapper align-inline">
@@ -100,9 +100,9 @@
             </div>
             <div class="col-sm-9">
               <div class="quantity-select">
-                <span class="minus"></span>
+                <span class="minus" (click)="minus()"></span>
                 <span class="number">1</span>
-                <span class="plus"></span>
+                <span class="plus" (click)="plus()"></span>
               </div>
             </div>
           </div>

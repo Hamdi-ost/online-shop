@@ -1,6 +1,7 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
 import { AuthService } from '../../core/auth.service';
-import { OrderService } from 'src/app/services/order.service';
+import { OrdersService } from 'src/app/services/orders.service';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-navbar',
@@ -9,25 +10,38 @@ import { OrderService } from 'src/app/services/order.service';
 })
 export class NavbarComponent implements OnInit {
   orders = [];
-  total;
+  total = 0;
   exist;
-  constructor(public auth: AuthService, private orderService: OrderService) {
+  constructor(public auth: AuthService, private orderService: OrdersService) {
   }
 
 
   ngOnInit() {
     this.exist = this.auth.auth;
-    this.orders = this.orderService.getCart();
-    this.total = this.orderService.getTotal();
+    this.getOrdersList();
   }
 
   authExist() {
     this.exist = !this.exist;
   }
 
-  deleteItem (id) {
-    this.orderService.deleteOrder(id);
-    this.orderService.getCart();
+  getOrdersList() {
+    this.orderService.getOrdersList().snapshotChanges().pipe(map(changes => {
+      return changes.map(c => ({ key: c.payload.key, ...c.payload.val() }));
+    })).subscribe(orders => {
+      this.orders = orders;
+      this.orders.forEach(element => {
+        this.total = this.total + element.total;
+      });
+    });
+  }
+
+  deleteOrders() {
+    this.orderService.deleteOrder(this.orders[0].key);
+    this.total = this.total - this.orders[0].key.total;
+    if (isNaN(this.total)) {
+      this.total = 0;
+    }
   }
 
 

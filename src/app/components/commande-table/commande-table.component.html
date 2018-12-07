@@ -17,7 +17,7 @@
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Date</th>
       <td mat-cell *matCellDef="let row">{{row.date}} <div style="float: right; margin-left: -500px">
           <div>
-            <a class="button size-1 style-3" href="#">
+            <a class="button size-1 style-3" routerLink="/commande/{{row.id}}">
               <span class="button-wrapper">
                 <span class="icon"><img src="../../assets/img/icon-4.png" alt=""></span>
                 <span class="text">learn more</span>

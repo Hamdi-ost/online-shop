@@ -30,7 +30,7 @@
             <div class="cart-toggle hidden-xs hidden-sm">
               <div class="cart-overflow">
                 <div *ngFor="let order of orders" class="cart-entry clearfix">
-                  <a class="cart-entry-thumbnail" ><img src="../../../assets/img/{{order.img}}" alt=""></a>
+                  <a class="cart-entry-thumbnail" ><img src="{{order.views[0]}}" style="height: 130px; width: 100px" alt=""></a>
                   <div class="cart-entry-description">
                     <table>
                       <tbody>
@@ -40,14 +40,14 @@
                             <div class="simple-article size-1">QUANTITY: {{order.quantity}}</div>
                           </td>
                           <td>
-                            <div class="simple-article size-3 grey">{{order.prixUnitaire}}DT</div>
+                            <div class="simple-article size-3 grey">{{order.prix}}DT</div>
                             <div class="simple-article size-1">TOTAL: {{order.total}}</div>
                           </td>
                           <td>
                             <div class="cart-color" style="background: red;"></div>
                           </td>
                           <td>
-                            <div class="button-close" (click)="deleteItem(1)"></div>
+                            <div class="button-close" (click)="deleteOrders()"></div>
                           </td>
                         </tr>
                       </tbody>
