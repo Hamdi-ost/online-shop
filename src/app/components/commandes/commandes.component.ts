@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
 import { CommandeService } from 'src/app/services/commande.service';
 import { ActivatedRoute } from '@angular/router';
 import * as data from '../../../assets/produits.json';
-=======
->>>>>>> rahma
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-commandes',
@@ -15,16 +13,22 @@ export class CommandesComponent implements OnInit {
 
   commandes;
   commande;
-  ordredProducts;
+  ordredProducts = [];
 
   constructor(private commandeService: CommandeService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.commandeService.getCommande('mohamed.tounsi@gmail.com').subscribe(commandes => {
-      this.commandes = commandes;
+    this.commandeService.getCommandesList().snapshotChanges().pipe(map(changes => {
+      return changes.map(c => ({ key: c.payload.key, ...c.payload.val() }));
+    })).subscribe(commande => {
+      this.commandes = commande;
       this.route.params.subscribe(params => {
+        // tslint:disable-next-line:no-shadowed-variable
         this.commande = this.commandes.filter(commande => Number(commande.id) === Number(params['id']));
-        this.ordredProducts = data['products'].filter(product => Number(product.id === this.commande[0].id));
+        this.commande[0].productsId.forEach(el => {
+           this.ordredProducts.push(data['products'].filter(res => Number(res.id) === Number(el)));
+           console.log(this.ordredProducts);
+          });
       });
     });
   }

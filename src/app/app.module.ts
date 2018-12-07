@@ -17,7 +17,7 @@ import { LastRowComponent } from './components/last-row/last-row.component';
 import { FilterPipe } from './components/sidebar/filter.pipe';
 import { ProductDetailsComponent } from './components/products-list/product-details/product-details.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
-import {NgxPaginationModule } from 'ngx-pagination';
+import { NgxPaginationModule } from 'ngx-pagination';
 import { HttpClientModule } from '@angular/common/http';
 import { CoreModule } from './core/core.module';
 import { AngularFireModule } from '@angular/fire';
@@ -27,8 +27,8 @@ import { AuthGuard } from './core/auth.guard';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { FlashMessagesModule } from 'angular2-flash-messages';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatTableModule} from '@angular/material/table';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTableModule } from '@angular/material/table';
 import { CommandeTableComponent } from './components/commande-table/commande-table.component';
 import { MatPaginatorModule, MatSortModule } from '@angular/material';
 import { CommandesComponent } from './components/commandes/commandes.component';
@@ -44,7 +44,7 @@ const appRoutes: Routes = [
   { path: 'products', component: ProductsListComponent },
   { path: 'products/:cate/:categor', component: ProductsCategoryComponent },
   { path: 'products/:id', component: ProductDetailsComponent },
-  { path: 'commande/:id', component: CommandesComponent },
+  { path: 'commande/:id', component: CommandesComponent, canActivate: [AuthGuard] },
   { path: 'contact', component: ContactComponent },
   { path: 'profile', component: UserProfilComponent, canActivate: [AuthGuard] },
   { path: 'checkout', component: CheckoutComponent, canActivate: [AuthGuard] },

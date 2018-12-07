@@ -19,6 +19,7 @@ export class ProductsListComponent implements OnInit {
       product[i]['src'] = 'src/assets/img/' + this.src[i];
       }
       this.products.push(product);
+      console.log(this.products);
     });
   }
   ngOnInit() {

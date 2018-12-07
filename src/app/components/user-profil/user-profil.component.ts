@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../core/auth.service';
 import { CommaExpr } from '@angular/compiler';
 import { CommandeService } from 'src/app/services/commande.service';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-user-profil',
@@ -10,13 +11,19 @@ import { CommandeService } from 'src/app/services/commande.service';
 })
 export class UserProfilComponent implements OnInit {
 
+  commandes;
   constructor(public auth: AuthService, private commandeService: CommandeService) { }
 
   ngOnInit() {
   }
 
+
   getCommande() {
-    this.commandeService.getCommande('mohamed.tounsi@gmail.com').subscribe(res => console.log(res));
+    this.commandeService.getCommandesList().snapshotChanges().pipe(map(changes => {
+      return changes.map(c => ({ key: c.payload.key, ...c.payload.val() }));
+    })).subscribe(commandes => {
+      this.commandes = commandes;
+    });
   }
 
 }

@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator, MatSort } from '@angular/material';
 import { CommandeTableDataSource } from './commande-table-datasource';
 import { CommandeService } from '../../services/commande.service';
+import { map } from 'rxjs/operators';
+import { AuthService } from 'src/app/core/auth.service';
 
 @Component({
   selector: 'app-commande-table',
@@ -17,8 +19,19 @@ export class CommandeTableComponent implements OnInit {
   displayedColumns = ['id', 'reference', 'date'];
 
   data = [];
-  constructor (private commandeService: CommandeService) {
-    this.commandeService.getCommande('mohamed.tounsi@gmail.com').subscribe(res => {
+  constructor (private commandeService: CommandeService, private auth: AuthService) {
+    this.auth.user.subscribe(user => {
+      this.commandeService.getCommandesList().snapshotChanges().pipe(map(changes => {
+        return changes.map(c => ({ key: c.payload.key, ...c.payload.val() }));
+      })).subscribe(commande => {
+        const obj = commande;
+        const  commandeDemmande = obj.filter(res => res.email === user.email);
+        this.dataSource = new CommandeTableDataSource(commandeDemmande, this.paginator, this.sort);
+
+      });
+    });
+
+   /* this.commandeService.getCommande('mohamed.tounsi@gmail.com').subscribe(res => {
       const obj = [];
       this.data.push(res);
       console.log(this.data);
@@ -27,7 +40,7 @@ export class CommandeTableComponent implements OnInit {
         obj.push(ob);
       }
       this.dataSource = new CommandeTableDataSource(obj, this.paginator, this.sort);
-    });
+    });*/
   }
 
   ngOnInit() {
