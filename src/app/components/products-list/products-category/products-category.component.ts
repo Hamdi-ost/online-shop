@@ -13,18 +13,19 @@ export class ProductsCategoryComponent implements OnInit {
   list = data['products'];
 
   prods;
-  constructor(private route: ActivatedRoute, private catgService: ProductsService, private test : CategoriesService) {
+  constructor(private route: ActivatedRoute, private catgService: ProductsService, private test: CategoriesService) {
     this.route.params.subscribe(params => {
       this.prods = [] ;
              console.log(params) ;
               for (let i = 0; i < this.list.length  ; i++) {
               console.log(this.list[i].categoryName);
-              if (this.list[i].categoryName === params['categor'])
+              if (this.list[i].categoryName === params['categor']) {
               this.prods.push(this.list[i]);
+              }
             }
      console.log(this.prods);
-     
-    });}
+
+    }); }
   ngOnInit() {
   }
 
