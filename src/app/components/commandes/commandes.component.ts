@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
 import { CommandeService } from 'src/app/services/commande.service';
 import { ActivatedRoute } from '@angular/router';
 import * as data from '../../../assets/produits.json';
-=======
->>>>>>> rahma
 
 @Component({
   selector: 'app-commandes',
