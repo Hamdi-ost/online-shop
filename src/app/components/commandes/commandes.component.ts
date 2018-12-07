@@ -14,6 +14,7 @@ export class CommandesComponent implements OnInit {
   commandes;
   commande;
   ordredProducts = [];
+  total = 0;
 
   constructor(private commandeService: CommandeService, private route: ActivatedRoute) { }
 
@@ -25,10 +26,13 @@ export class CommandesComponent implements OnInit {
       this.route.params.subscribe(params => {
         // tslint:disable-next-line:no-shadowed-variable
         this.commande = this.commandes.filter(commande => Number(commande.id) === Number(params['id']));
+        console.log(this.commande);
         this.commande[0].productsId.forEach(el => {
-           this.ordredProducts.push(data['products'].filter(res => Number(res.id) === Number(el)));
-           console.log(this.ordredProducts);
+          this.ordredProducts.push(data['products'].filter(res => Number(res.id) === Number(el)));
+          this.ordredProducts.forEach(element => {
+            this.total = this.total + element[0].prix;
           });
+        });
       });
     });
   }

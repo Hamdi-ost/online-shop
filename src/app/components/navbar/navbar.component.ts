@@ -10,7 +10,7 @@ import { map } from 'rxjs/operators';
 })
 export class NavbarComponent implements OnInit {
   orders = [];
-  total = 0;
+  public total = 0;
   exist;
   constructor(public auth: AuthService, private orderService: OrdersService) {
   }

@@ -6,6 +6,7 @@ import { FlashMessagesService } from 'angular2-flash-messages/module/flash-messa
 import { AngularFireDatabase } from '@angular/fire/database';
 import { map } from 'rxjs/operators';
 import { AuthService } from '../../core/auth.service';
+import { NavbarComponent } from '../navbar/navbar.component';
 
 
 @Component({
@@ -13,7 +14,7 @@ import { AuthService } from '../../core/auth.service';
   templateUrl: './checkout.component.html',
   styleUrls: ['./checkout.component.css']
 })
-export class CheckoutComponent implements OnInit, AfterViewChecked {
+export class CheckoutComponent implements OnInit, OnChanges {
 
   public orders;
   commandes;
@@ -27,11 +28,13 @@ export class CheckoutComponent implements OnInit, AfterViewChecked {
             private commandeService: CommandeService,
             private flashMessages: FlashMessagesService,
             private router: Router,
-            private auth: AuthService) {
+            private auth: AuthService,
+            private navbar: NavbarComponent) {
+              console.log(this.navbar.total);
+
   }
 
   ngOnInit() {
-    this.db.list('orders').valueChanges().subscribe(re => console.log(re));
     this.getOrdersList();
     this.getCommandesList();
   }
@@ -67,6 +70,11 @@ export class CheckoutComponent implements OnInit, AfterViewChecked {
     // tslint:disable-next-line:max-line-length
     const obj = {id: this.commandes[this.commandes.length - 1].id + 1, email: user.email, date: date.getDay() + '/' + date.getMonth() + '/' + date.getFullYear(), reference: 'ref/' + (this.commandes[this.commandes.length - 1].id + 1), productsId: productOrdred};
     this.commandeService.createOrder(obj);
+    console.log(this.navbar.total);
+    this.orderService.deleteAll();
+    console.log(this.navbar.total);
+    this.router.navigateByUrl('/profile');
+    this.flashMessages.show('Commande created', { cssClass: 'alert-success', timeout: 3000 });
   });
   }
 
@@ -77,8 +85,9 @@ export class CheckoutComponent implements OnInit, AfterViewChecked {
     }
   }
 
-  ngAfterViewChecked(): void {
+  ngOnChanges() {
     this.deleteOrders();
+
   }
 
 

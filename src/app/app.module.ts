@@ -84,7 +84,7 @@ const appRoutes: Routes = [
     HttpClientModule,
     FormsModule,
     BrowserModule,
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(appRoutes, {scrollPositionRestoration: 'enabled'}),
     NgxPaginationModule,
     AngularFireModule.initializeApp(environment.firebase),
     CoreModule,
@@ -92,7 +92,7 @@ const appRoutes: Routes = [
     MatPaginatorModule,
     MatSortModule
   ],
-  providers: [AuthGuard],
+  providers: [AuthGuard, NavbarComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

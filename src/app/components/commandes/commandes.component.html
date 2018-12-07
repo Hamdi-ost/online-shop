@@ -23,17 +23,17 @@
     <div class="col-md-6">
       <h4 class="h4 col-xs-b25">your order</h4>
       <div class="cart-entry clearfix" *ngFor="let product of ordredProducts">
-        <a class="cart-entry-thumbnail" style="padding-top: 30px"><img style="width:70px; height: 50px;" src="{{product.views[0]}}" alt=""></a>
+        <a class="cart-entry-thumbnail" style="padding-top: 30px"><img style="width:70px; height: 50px;" src="{{product[0].views[0]}}" alt=""></a>
         <div class="cart-entry-description">
           <table>
             <tbody>
               <tr>
                 <td>
-                  <div class="h6"><a href="#">{{product.name}}</a></div>
+                  <div class="h6"><a href="#">{{product[0].name}}</a></div>
                   <div class="simple-article size-1">QUANTITY: 1</div>
                 </td>
                 <td>
-                  <div class="simple-article size-3 grey">{{product.prix}} DT</div>
+                  <div class="simple-article size-3 grey">{{product[0].prix}} DT</div>
                   <div class="simple-article size-1">TOTAL: $310.00</div>
                 </td>
                 <td>
@@ -50,7 +50,7 @@
             cart subtotal
           </div>
           <div class="col-xs-6 col-xs-text-right">
-            <div class="color">$1195.00</div>
+            <div class="color">{{total}} DT</div>
           </div>
         </div>
       </div>
@@ -70,7 +70,7 @@
             order total
           </div>
           <div class="col-xs-6 col-xs-text-right">
-            <div class="color">$1195.00</div>
+            <div class="color">{{total}} DT</div>
           </div>
         </div>
       </div>
