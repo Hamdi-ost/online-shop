@@ -55,9 +55,14 @@ export class CheckoutComponent implements OnInit, AfterViewChecked {
     let commande;
     const date = new Date().toJSON().slice(0, 10).replace(/-/g, '/');
     let key;
+<<<<<<< HEAD
     this.commandeService.getCommande('mohamed.tounsi@gmail.com').subscribe( res => {
       this.data.push(res);
       key = Number(res[this.data[0].length - 1]['reference'].substr(res[10]['reference'].indexOf('/') + 1, 2)) + 1;
+=======
+    this.commandeService.getCommande('mohamed.tounsi@gmail.com').subscribe( data => {
+      key = Number(data[15]['reference'].substr(data[10]['reference'].indexOf('/') + 1, 2)) + 1;
+>>>>>>> rahma
      commande = {
         'reference': 'Ord625/' + key, date: 521554525, 'email': 'mohamed.tounsi@gmail.com', 'statut': 'new', 'productsId': this.productsId
       };

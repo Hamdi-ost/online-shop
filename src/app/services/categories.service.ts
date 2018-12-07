@@ -9,10 +9,10 @@ export class CategoriesService {
   constructor(private http: HttpClient) { }
 
   getCategory() {
-    return this.http.get('http://54.38.33.183:8081/hardware/api/products');
+    return this.http.get('http://54.38.33.183:8081/hardware/api/categories');
   }
 
   getCategoryById(id) {
-    return this.http.get('http://54.38.33.183:8081/hardware/api/products/' + id);
+    return this.http.get('http://54.38.33.183:8081/hardware/api/category/' + id);
   }
 }

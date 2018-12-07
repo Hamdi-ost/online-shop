@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 import { CommandeService } from 'src/app/services/commande.service';
 import { ActivatedRoute } from '@angular/router';
 import * as data from '../../../assets/produits.json';
+=======
+>>>>>>> rahma
 
 @Component({
   selector: 'app-commandes',
@@ -10,6 +13,7 @@ import * as data from '../../../assets/produits.json';
 })
 export class CommandesComponent implements OnInit {
 
+<<<<<<< HEAD
   commandes;
   commande;
   ordredProducts;
@@ -24,6 +28,11 @@ export class CommandesComponent implements OnInit {
         this.ordredProducts = data['products'].filter(product => Number(product.id === this.commande[0].id));
       });
     });
+=======
+  constructor() { }
+
+  ngOnInit() {
+>>>>>>> rahma
   }
 
 }

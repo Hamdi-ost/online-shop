@@ -14,7 +14,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { LastRowComponent } from './components/last-row/last-row.component';
-import { FilterPipe } from './filter.pipe';
+import { FilterPipe } from './components/sidebar/filter.pipe';
 import { ProductDetailsComponent } from './components/products-list/product-details/product-details.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import {NgxPaginationModule } from 'ngx-pagination';
@@ -32,6 +32,7 @@ import {MatTableModule} from '@angular/material/table';
 import { CommandeTableComponent } from './components/commande-table/commande-table.component';
 import { MatPaginatorModule, MatSortModule } from '@angular/material';
 import { CommandesComponent } from './components/commandes/commandes.component';
+import { ProductsCategoryComponent } from './components/products-list/products-category/products-category.component';
 
 
 const appRoutes: Routes = [
@@ -41,6 +42,7 @@ const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'products', component: ProductsListComponent },
+  { path: 'products/:cate/:categor', component: ProductsCategoryComponent },
   { path: 'products/:id', component: ProductDetailsComponent },
   { path: 'commande/:id', component: CommandesComponent },
   { path: 'contact', component: ContactComponent },
@@ -72,7 +74,8 @@ const appRoutes: Routes = [
     UserProfilComponent,
     CheckoutComponent,
     CommandeTableComponent,
-    CommandesComponent
+    CommandesComponent,
+    ProductsCategoryComponent
   ],
   imports: [
     MatTableModule,
